@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NextSeo } from 'next-seo';
+import React, { useState } from "react";
+import { NextSeo } from "next-seo";
 import {
   useColorMode,
   Heading,
@@ -9,29 +9,29 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Icon
-} from '@chakra-ui/core';
+  Icon,
+} from "@chakra-ui/core";
 
-import Container from '../components/Container';
-import BlogPost from '../components/BlogPost';
+import Container from "../components/Container";
+import BlogPost from "../components/BlogPost";
 
 // eslint-disable-next-line import/no-unresolved, import/extensions
-import { frontMatter as blogPosts } from './blog/**/*.mdx';
-import { frontMatter as styleGuides } from './blog/style-guides-component-libraries-design-systems.mdx';
-import { frontMatter as stripeDesign } from './blog/how-stripe-designs-beautiful-websites.mdx';
-import { frontMatter as monorepo } from './blog/monorepo-lerna-yarn-workspaces.mdx';
+import { frontMatter as blogPosts } from "./blog/**/*.mdx";
+import { frontMatter as styleGuides } from "./blog/style-guides-component-libraries-design-systems.mdx";
+import { frontMatter as stripeDesign } from "./blog/how-stripe-designs-beautiful-websites.mdx";
+import { frontMatter as monorepo } from "./blog/monorepo-lerna-yarn-workspaces.mdx";
 
-const url = 'https://leerob.io/blog';
-const title = 'Blog – Lee Robinson';
+const url = "https://lukepierce.dev/blog";
+const title = "Blog – Luke Pierce";
 const description =
-  'Thoughts on the software industry, programming, tech, videography, music, and my personal life.';
+  "Thoughts on the software industry, programming, tech, videography, music, and my personal life.";
 
 const Blog = () => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   const filteredBlogPosts = blogPosts
@@ -52,7 +52,7 @@ const Blog = () => {
         openGraph={{
           url,
           title,
-          description
+          description,
         }}
       />
       <Container>
@@ -115,7 +115,7 @@ const Blog = () => {
             <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
               All Posts
             </Heading>
-            {!filteredBlogPosts.length && 'No posts found.'}
+            {!filteredBlogPosts.length && "No posts found."}
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
             ))}

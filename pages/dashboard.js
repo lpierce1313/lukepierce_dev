@@ -1,34 +1,34 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
+import React from "react";
+import { NextSeo } from "next-seo";
 import {
   useColorMode,
   Heading,
   Text,
   Flex,
   Stack,
-  SimpleGrid
-} from '@chakra-ui/core';
+  SimpleGrid,
+} from "@chakra-ui/core";
 
-import Analytics from '../components/metrics/Analytics';
-import Buttondown from '../components/metrics/Buttondown';
-import Container from '../components/Container';
-import GitHub from '../components/metrics/Github';
-import Gumroad from '../components/metrics/Gumroad';
-import Unsplash from '../components/metrics/Unsplash';
-import YouTube from '../components/metrics/Youtube';
-import TopTracks from '../components/TopTracks';
-import { CustomLink } from '../components/MDXComponents';
+import Analytics from "../components/metrics/Analytics";
+import Buttondown from "../components/metrics/Buttondown";
+import Container from "../components/Container";
+import GitHub from "../components/metrics/Github";
+import Gumroad from "../components/metrics/Gumroad";
+import Unsplash from "../components/metrics/Unsplash";
+import YouTube from "../components/metrics/Youtube";
+import TopTracks from "../components/TopTracks";
+import { CustomLink } from "../components/MDXComponents";
 
-const url = 'https://leerob.io/dashboard';
-const title = 'Dashboard – Lee Robinson';
+const url = "https://lukepierce.dev/dashboard";
+const title = "Dashboard – Luke Pierce";
 const description =
-  'My personal dashboard, built with Next.js API routes deployed as serverless functions.';
+  "My personal dashboard, built with Next.js API routes deployed as serverless functions.";
 
 const Dashboard = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   return (
@@ -43,12 +43,12 @@ const Dashboard = () => {
           description,
           images: [
             {
-              url: 'https://leerob.io/static/images/dashboard.jpg',
+              url: "https://leerob.io/static/images/dashboard.jpg",
               alt: description,
               width: 1280,
-              height: 720
-            }
-          ]
+              height: 720,
+            },
+          ],
         }}
       />
       <Container>

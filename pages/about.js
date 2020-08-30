@@ -1,5 +1,5 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
+import React from "react";
+import { NextSeo } from "next-seo";
 import {
   useColorMode,
   Heading,
@@ -7,20 +7,20 @@ import {
   Flex,
   Stack,
   Link,
-  Icon
-} from '@chakra-ui/core';
+  Icon,
+} from "@chakra-ui/core";
 
-import Container from '../components/Container';
-import { CustomLink } from '../components/MDXComponents';
+import Container from "../components/Container";
+import { CustomLink } from "../components/MDXComponents";
 
-const url = 'https://leerob.io/about';
-const title = 'About Me – Lee Robinson';
+const url = "https://lukepierce.dev/about";
+const title = "About Me – Luke Pierce";
 
 const About = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   return (
@@ -30,7 +30,7 @@ const About = () => {
         canonical={url}
         openGraph={{
           url,
-          title
+          title,
         }}
       />
       <Container>

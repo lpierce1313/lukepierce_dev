@@ -1,31 +1,31 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
+import React from "react";
+import { NextSeo } from "next-seo";
 import {
   useColorMode,
   Heading,
   Text,
   Flex,
   Stack,
-  List
-} from '@chakra-ui/core';
+  List,
+} from "@chakra-ui/core";
 
-import Container from '../components/Container';
-import Subscribe from '../components/Subscribe';
-import NewsletterLink from '../components/NewsletterLink';
+import Container from "../components/Container";
+import Subscribe from "../components/Subscribe";
+import NewsletterLink from "../components/NewsletterLink";
 
 // eslint-disable-next-line import/no-unresolved, import/extensions
-import { frontMatter as newsletters } from './newsletter/**/*.mdx';
+import { frontMatter as newsletters } from "./newsletter/**/*.mdx";
 
-const url = 'https://leerob.io/newsletter';
-const title = 'Newsletter – Lee Robinson';
+const url = "https://lukepierce.dev/newsletter";
+const title = "Newsletter – Luke Pierce";
 const description =
-  'Thoughts on the software industry, programming, tech, videography, music, and my personal life.';
+  "Thoughts on the software industry, programming, tech, videography, music, and my personal life.";
 
 const Newsletter = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   return (
@@ -37,7 +37,7 @@ const Newsletter = () => {
         openGraph={{
           url,
           title,
-          description
+          description,
         }}
       />
       <Container>
