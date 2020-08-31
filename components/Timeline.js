@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   useColorMode,
   Heading,
@@ -9,24 +9,23 @@ import {
   ListItem,
   Icon,
   Stack,
-  Divider
-} from '@chakra-ui/core';
+  Divider,
+} from "@chakra-ui/core";
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
   const borderColor = {
-    light: 'gray.200',
-    dark: 'gray.600'
+    light: "gray.200",
+    dark: "gray.600",
   };
-
   return <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />;
 };
 
 const TimelineStep = ({ title, children }) => {
   const { colorMode } = useColorMode();
   const color = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   return (
@@ -46,17 +45,6 @@ const TimelineStep = ({ title, children }) => {
 
 const FullTimeline = () => (
   <>
-    <YearDivider />
-    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
-      2017
-    </Heading>
-    <List>
-      <TimelineStep title="Software Developer Internship">
-        I worked at Vortek Instruments as a Software Engineering Intern and
-        created NodeJS applications to communicate with different C++
-        applications they used.
-      </TimelineStep>
-    </List>
     <YearDivider />
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2014
@@ -225,6 +213,23 @@ const Timeline = () => {
           I graduated from Colorado School of Mines in December 2018 as the top
           graduating senior in Electrical Engineering and Magna Cum Laude. My
           grandpa and mom were both so proud of me.
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
+        2017
+      </Heading>
+      <List>
+        <TimelineStep title="Software Developer Internship">
+          I worked at Vortek Instruments as a Software Engineering Intern and
+          created NodeJS applications to communicate with different C++
+          applications they used.
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
