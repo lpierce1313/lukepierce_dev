@@ -13,9 +13,6 @@
     "url": "git+https://github.com/leerob/leerob.io.git"
   },
   "scripts": {
-    "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
-    "prestart": "npm run build:tailwind",
-    "prebuild": "npm run build:tailwind",
     "build": "next build",
     "dev": "next",
     "lint": "eslint . --ext .json --ext .js",
