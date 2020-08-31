@@ -1,9 +1,9 @@
-import React from 'react';
-import NextLink from 'next/link';
-import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core';
-import styled from '@emotion/styled';
+import React from "react";
+import NextLink from "next/link";
+import { useColorMode, Button, Flex, Box, IconButton } from "@chakra-ui/core";
+import styled from "@emotion/styled";
 
-import Footer from './Footer';
+import Footer from "./Footer";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -17,16 +17,16 @@ const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const bgColor = {
-    light: 'white',
-    dark: 'gray.900'
+    light: "white",
+    dark: "gray.900",
   };
   const primarytextColor = {
-    light: 'black',
-    dark: 'white'
+    light: "black",
+    dark: "white",
   };
   const navBgColor = {
-    light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(23, 25, 35, 0.8)'
+    light: "rgba(255, 255, 255, 0.8)",
+    dark: "rgba(23, 25, 35, 0.8)",
   };
 
   return (
@@ -46,11 +46,11 @@ const Container = ({ children }) => {
       >
         <IconButton
           aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
+          icon={colorMode === "dark" ? "sun" : "moon"}
           onClick={toggleColorMode}
         />
         <Box>
-          <NextLink href="/dashboard" passHref>
+          {/* <NextLink href="/dashboard" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Dashboard
             </Button>
@@ -59,15 +59,15 @@ const Container = ({ children }) => {
             <Button as="a" variant="ghost" p={[1, 4]}>
               Blog
             </Button>
+          </NextLink> */}
+          <NextLink href="/" passHref>
+            <Button as="a" variant="ghost" p={[1, 4]}>
+              Home
+            </Button>
           </NextLink>
           <NextLink href="/about" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               About
-            </Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Home
             </Button>
           </NextLink>
         </Box>

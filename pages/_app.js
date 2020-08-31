@@ -18,7 +18,6 @@ import "../styles/index.css";
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
-
   return (
     <>
       <CSSReset />
