@@ -52,15 +52,16 @@ const About = () => {
               About Me
             </Heading>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Hey, I’m Lee. I live in Des Moines, IA and I’m a Senior Software
-              Engineer at&nbsp;
-              <CustomLink href="https://innovate.hy-vee.com">Hy-Vee</CustomLink>
+              Hey, I’m Luke Pierce. I live in Lakewood, CO and I’m a Software
+              Engineer at Raytheon in Aurora, CO, a well known defense
+              contractor.
+              {/* <CustomLink href="https://innovate.hy-vee.com">Hy-Vee</CustomLink>
               , a $10B grocery tech company in the Midwest. As a tech lead, my
               primary focus is developing Aisles Online, Hy-Vee’s e-commerce
               grocery shopping platform – which serves millions of customers
-              every year. I also help maintain our internal component library.
+              every year. I also help maintain our internal component library. */}
             </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
+            {/* <Text color={secondaryTextColor[colorMode]} mb={4}>
               At the beginning of 2020, I launched my most ambitious project – a
               50+ lesson video course on React and Next.js. It’s called&nbsp;
               <CustomLink href="https://masteringnextjs.com">
@@ -83,8 +84,8 @@ const About = () => {
               graduating with a degree in Computer Engineering. I spend my free
               time playing music, creating videos, and enjoying time with
               friends and family.
-            </Text>
-            <Heading letterSpacing="tight" mt={8} mb={4} as="h2" size="xl">
+            </Text> */}
+            {/* <Heading letterSpacing="tight" mt={8} mb={4} as="h2" size="xl">
               Conference Talks
             </Heading>
             <Heading size="md" as="h3" mb={2} fontWeight="medium">
@@ -98,8 +99,8 @@ const About = () => {
                   <Icon name="external-link" mx={2} size="16px" />
                 </Flex>
               </Link>
-            </Heading>
-            <Text color={secondaryTextColor[colorMode]} mb={8}>
+            </Heading> */}
+            {/* <Text color={secondaryTextColor[colorMode]} mb={8}>
               During this workshop, you'll learn how to integrate Prisma with
               Next.js and build a statically-generated site that displays a list
               of your favorite songs. We'll use Chakra UI for styling and deploy
@@ -142,11 +143,11 @@ const About = () => {
               to stick out? Learn from an engineer who's been involved on both
               sides - both as a candidate and with hiring - on what candidates
               really want out of a position.
-            </Text>
+            </Text> */}
             <iframe
               height="280"
-              src="https://www.google.com/maps/d/embed?mid=1QOGi-u8d4vwoQ4vC4zQjKxrSfsDIQdOK&hl=en"
-              title="Lee's Travel Map"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1v2GHUFad-oc6_8EO4RU8-90wE90-0HH2"
+              title="Luke's Travel Map"
               width="100%"
             />
           </Flex>
