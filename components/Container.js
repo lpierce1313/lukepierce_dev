@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NextLink from "next/link";
 import { useColorMode, Button, Flex, Box, IconButton } from "@chakra-ui/core";
 import styled from "@emotion/styled";
@@ -16,6 +16,12 @@ const StickyNav = styled(Flex)`
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
+  useEffect(() => {
+    if (colorMode !== localStorage.getItem("theme")) {
+      toggleColorMode();
+    }
+  }, []);
+
   const bgColor = {
     light: "white",
     dark: "gray.900",
@@ -28,6 +34,14 @@ const Container = ({ children }) => {
     light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(23, 25, 35, 0.8)",
   };
+
+  function storeColor() {
+    if (colorMode === "dark") {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+  }
 
   return (
     <>
@@ -47,7 +61,10 @@ const Container = ({ children }) => {
         <IconButton
           aria-label="Toggle dark mode"
           icon={colorMode === "dark" ? "sun" : "moon"}
-          onClick={toggleColorMode}
+          onClick={() => {
+            toggleColorMode();
+            storeColor();
+          }}
         />
         <Box>
           {/* <NextLink href="/dashboard" passHref>

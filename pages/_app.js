@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { Global, css } from "@emotion/core";
 import { DefaultSeo } from "next-seo";
@@ -53,14 +53,6 @@ Router.events.on("routeChangeComplete", () => {
 });
 
 const App = ({ Component, pageProps }) => {
-  useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
-        includedDomains: ["leerob.io"],
-      });
-    }
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>

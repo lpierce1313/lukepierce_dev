@@ -168,7 +168,7 @@ const Timeline = () => {
       <Heading letterSpacing="tight" mb={4} size="xl" fontWeight="bold">
         Timeline
       </Heading>
-      {/* <Heading
+      <Heading
         as="h3"
         size="lg"
         fontWeight="bold"
@@ -178,11 +178,30 @@ const Timeline = () => {
         2020
       </Heading>
       <List>
-        <TimelineStep title="Launched React 2025 💯">
-          Building a real SaaS application, from zero to production.
+        <TimelineStep title="Hedged my index finger during a landscaping project 🌳 🚑">
+          While hedging some shrubs during one of our projects, I reached my
+          hand by accident in a hedger. My little brother then rushed me to the
+          emergency clinic nearby, and I got 6 stiches in my finger.
         </TimelineStep>
-      </List> */}
-      {/* <YearDivider /> */}
+      </List>
+      <List>
+        <TimelineStep title="Started a landscaping company with little brother 🌞 🌿">
+          Started a local landscaping company named Milehigh Lawncare with my
+          brother Adam. I developed a website, advertised on Craigslist,
+          Nextdoor, Thumbtack, and taped fliers onto mailboxes. We had more than
+          enough customers for the entire summer.
+        </TimelineStep>
+      </List>
+      <List>
+        <TimelineStep title="Broke my finger playing basketball 🚑 🏀">
+          I went to play basketball at a local gym, and while I was playing pick
+          up, I reached for the ball and my finger bent back. After two weeks,
+          it kept hurting and I finally went to the doctor. Once I got some
+          x-rays, he found that I had a fracture in my 4th finger. I had to wear
+          a splint for 30 days.
+        </TimelineStep>
+      </List>
+      <YearDivider />
       <Heading
         as="h3"
         size="lg"
@@ -193,7 +212,7 @@ const Timeline = () => {
         2019
       </Heading>
       <List>
-        <TimelineStep title="Full time Employee at Raytheon">
+        <TimelineStep title="Full time Employee at Raytheon 💻">
           I started a full time position as a Software Engineer I at Raytheon in
           Aurora, CO.
         </TimelineStep>
@@ -209,7 +228,7 @@ const Timeline = () => {
         2018
       </Heading>
       <List>
-        <TimelineStep title="Graduated from Colorado School of Mines 🎓">
+        <TimelineStep title="Graduated from Colorado School of Mines 🎓 🏫">
           I graduated from Colorado School of Mines in December 2018 as the top
           graduating senior in Electrical Engineering and Magna Cum Laude. My
           grandpa and mom were both so proud of me.
@@ -226,10 +245,17 @@ const Timeline = () => {
         2017
       </Heading>
       <List>
-        <TimelineStep title="Software Developer Internship">
+        <TimelineStep title="Software Developer Internship ⌨️ 🖱">
           I worked at Vortek Instruments as a Software Engineering Intern and
           created NodeJS applications to communicate with different C++
           applications they used.
+        </TimelineStep>
+      </List>
+      <List>
+        <TimelineStep title="Hiked Mt of the Holy Cross, 34th 14er 🏔">
+          Hiked Mt of the Holy Cross in Buena Vista, CO. It was my 34th out of
+          all 54 14ers in Colorado. It was the most gorgeous hike I have been
+          on.
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (

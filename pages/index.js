@@ -55,7 +55,7 @@ const Index = () => {
             </a>
           </div>
           <div className="w-1/2">
-            <div className="text-base">
+            <div className="text-sm">
               I'm a Colorado based software engineer, full-stack developer and
               front-end designer and have been working in this field the past 3
               years. I'm experienced in HTML5, JS, CSS3 and modern libraries in
