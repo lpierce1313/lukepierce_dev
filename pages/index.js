@@ -123,6 +123,12 @@ const Index = () => {
             href="https://www.milehighlawncare.com/"
             icon="jamstackfns"
           />
+          <ProjectCard
+            title="LP Photography"
+            description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
+            href="https://lpphotography.herokuapp.com/home.html"
+            icon="nextjs"
+          />
         </Flex>
         <Timeline />
         {/* <Subscribe /> */}
