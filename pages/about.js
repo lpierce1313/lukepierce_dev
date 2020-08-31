@@ -52,14 +52,33 @@ const About = () => {
               About Me
             </Heading>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Hey, I’m Luke Pierce. I live in Lakewood, CO and I’m a Software
-              Engineer at Raytheon in Aurora, CO, a well known defense
-              contractor.
-              {/* <CustomLink href="https://innovate.hy-vee.com">Hy-Vee</CustomLink>
-              , a $10B grocery tech company in the Midwest. As a tech lead, my
-              primary focus is developing Aisles Online, Hy-Vee’s e-commerce
-              grocery shopping platform – which serves millions of customers
-              every year. I also help maintain our internal component library. */}
+              My name is Luke Pierce and I am born and raised in Lakewood, CO. I
+              graduated from Colorado School of Mines with an Electrical
+              Engineering degree at the top of my class. I decided after I
+              completed my degree that I did not have a passion for Electrical
+              Engineering even though I understood it very well. Web development
+              is my passion, I taught myself HTML5, CSS, JavaScript, Ruby on
+              Rails, React, NextJS, Python, NodeJS. My favorite language being
+              NextJS which is one this portfolio is made from. I hope someday
+              that I can live in a apartment/town home in downtown Denver, have
+              amazing city views, and work for a small startup as a front-end
+              web developer.
+            </Text>
+            <Text color={secondaryTextColor[colorMode]} mb={4}>
+              Aside from programming, I am very passionate about fitness and
+              adventuring outdoors. Everyday, I go to the gym and do strength
+              training and cardio. I play sports leagues twice a week, such as,
+              Spikeball, Volleyball, Basketball, Football, and Tennis. I love
+              the mountains in Colorado, so I usually try to hike 1-2 times per
+              week. Overall, I live a well balanced life as I am able to work a
+              job that I am passionate about and am able to exercise and be
+              outdoors all of the time.
+            </Text>
+            <Text color={secondaryTextColor[colorMode]} mb={4}>
+              Someday, I would like to travel to atleast 50 different countries,
+              learn multiple languages, and visit every state in the United
+              States. Below, are places that I have travelled to so far, but
+              there will be many more to come.
             </Text>
             {/* <Text color={secondaryTextColor[colorMode]} mb={4}>
               At the beginning of 2020, I launched my most ambitious project – a

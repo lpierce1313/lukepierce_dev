@@ -71,11 +71,6 @@ const Container = ({ children }) => {
             <Button as="a" variant="ghost" p={[1, 4]}>
               Dashboard
             </Button>
-          </NextLink>
-          <NextLink href="/blog" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Blog
-            </Button>
           </NextLink> */}
           <NextLink href="/" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
@@ -87,6 +82,15 @@ const Container = ({ children }) => {
               About
             </Button>
           </NextLink>
+          <a
+            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=lpierce1313@gmail.com"
+            passHref
+            target="_blank"
+          >
+            <Button as="a" variant="ghost" p={[1, 4]}>
+              Contact
+            </Button>
+          </a>
         </Box>
       </StickyNav>
       <Flex
