@@ -46,16 +46,12 @@
           "value": "max-age=2592000; includeSubDomains; preload"
         },
         {
-          "key": "Feature-Policy",
-          "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; picture-in-picture 'none'; sync-xhr 'none'; usb 'none'; wake-lock 'none';"
-        },
-        {
           "key": "Permissions-Policy",
-          "value": "geolocation=(self \"https://example.com\"); microphone=()"
+          "value": "geolocation=(self \"https://lukepierce.dev\"); microphone=()"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src; lukepierce.dev"
+          "value": "default-src; https:"
         },
         {
           "key": "Expect-CT",
