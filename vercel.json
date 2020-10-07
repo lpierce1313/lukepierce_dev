@@ -2,11 +2,8 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "public": false,
   "redirects": [
-    {
-      "source": "/LeeRobinson.pdf",
-      "destination": "/robinson-resume-2019.pdf"
-    },
     {
       "source": "/projects",
       "destination": "/about"
@@ -22,65 +19,39 @@
   ],
   "headers": [
     {
-      "source": "/api/unsplash",
+      "source": "/(.*)",
       "headers": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=1200, stale-while-revalidate=600"
-        }
-      ]
-    },
-    {
-      "source": "/api/youtube",
-      "headers": [
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=120, stale-while-revalidate=60"
-        }
-      ]
-    },
-    {
-      "source": "/api/subscribers",
-      "headers": [
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=1200, stale-while-revalidate=600"
-        }
-      ]
-    },
-    {
-      "source": "/api/gumroad",
-      "headers": [
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=120, stale-while-revalidate=60"
-        }
-      ]
-    },
-    {
-      "source": "/api/github",
-      "headers": [
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=120, stale-while-revalidate=60"
-        }
-      ]
-    },
-    {
-      "source": "/api/now-playing",
-      "headers": [
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://*.lukepierce.dev"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=60, stale-while-revalidate=30"
-        }
-      ]
-    },
-    {
-      "source": "/api/top-tracks",
-      "headers": [
+          "key": "Strict-Transport-Security",
+          "value": "max-age=2592000; includeSubDomains; preload"
+        },
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=43200"
+          "key": "Feature-Policy",
+          "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; fullscreen 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; picture-in-picture 'none'; sync-xhr 'none'; usb 'none'; wake-lock 'none';"
+        },
+        {
+          "key": "Expect-CT",
+          "value": "max-age=86400, enforce, report-uri=/"
         }
       ]
     }
