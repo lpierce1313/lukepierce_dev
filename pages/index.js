@@ -1,11 +1,20 @@
 import React from "react";
 import {
+  Button,
   useColorMode,
   Heading,
   Text,
   Flex,
   Stack,
   Divider,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
 } from "@chakra-ui/core";
 
 import Timeline from "../components/Timeline";
@@ -19,6 +28,7 @@ import { frontMatter as stripeDesign } from "./blog/how-stripe-designs-beautiful
 import { frontMatter as monorepo } from "./blog/monorepo-lerna-yarn-workspaces.mdx";
 
 const Index = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: "gray.700",
@@ -28,6 +38,7 @@ const Index = () => {
     light: "gray.400",
     dark: "gray.600",
   };
+  const name = "Luke Pierce";
 
   return (
     <Container>
@@ -41,18 +52,24 @@ const Index = () => {
       >
         <div className="flex mb-4">
           <div className="w-1/2">
-            <div className="text-3xl font-bold">Hi I’m Luke Pierce,</div>
+            <div className="text-3xl font-bold">Hi I’m {name},</div>
             <div className="text-xl text-gray-600">
               a web developer <br /> and UI/UX designer
             </div>
             <br />
             <a
+              onClick={onOpen}
               className="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-              href="pierce-resume-2019.pdf"
-              target="_blank"
             >
               Grab My Resume
             </a>
+            {/* <a
+              className="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              href="pierce-resume-2019.pdf"
+              download
+            >
+              Grab My Resume
+            </a> */}
           </div>
           <div className="w-1/2">
             <div className="text-sm">
@@ -133,6 +150,28 @@ const Index = () => {
         <Timeline />
         {/* <Subscribe /> */}
       </Stack>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>{name} Resume 2020</ModalHeader>
+          <ModalCloseButton />
+          <ModalFooter>
+            <Button className="mx-2" variant="ghost">
+              <a href="pierce-resume-2019.pdf" download>
+                Save as PDF
+              </a>
+            </Button>
+            <Button
+              className="mx-2"
+              variantColor="blue"
+              mr={3}
+              onClick={onClose}
+            >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Container>
   );
 };
