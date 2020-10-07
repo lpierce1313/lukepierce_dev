@@ -51,7 +51,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src; https:"
+          "value": "default-src https:"
         },
         {
           "key": "Expect-CT",
