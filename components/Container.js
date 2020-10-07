@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import NextLink from "next/link";
 import { useColorMode, Button, Flex, Box, IconButton } from "@chakra-ui/core";
+import { FaPen } from "react-icons/fa";
 import styled from "@emotion/styled";
 
 import Footer from "./Footer";
@@ -58,14 +59,18 @@ const Container = ({ children }) => {
         mb={8}
         mx="auto"
       >
-        <IconButton
-          aria-label="Toggle dark mode"
-          icon={colorMode === "dark" ? "sun" : "moon"}
-          onClick={() => {
-            toggleColorMode();
-            storeColor();
-          }}
-        />
+        <Box>
+          <IconButton
+            className="mx-2"
+            aria-label="Toggle dark mode"
+            icon={colorMode === "dark" ? "sun" : "moon"}
+            onClick={() => {
+              toggleColorMode();
+              storeColor();
+            }}
+          />
+          <IconButton className="mx-2" aria-label="Doc Colors" icon={FaPen} />
+        </Box>
         <Box>
           {/* <NextLink href="/dashboard" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
