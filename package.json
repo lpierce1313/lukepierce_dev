@@ -36,7 +36,6 @@
     "@chakra-ui/core": "0.8.0",
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@fullhuman/postcss-purgecss": "^2.3.0",
     "@mapbox/rehype-prism": "0.4.0",
     "@mdx-js/loader": "1.5.8",
     "@mdx-js/react": "1.5.8",
@@ -50,7 +49,7 @@
     "firebase": "7.14.4",
     "firebase-admin": "8.12.1",
     "googleapis": "48.0.0",
-    "iframe-resizer-react": "^1.0.4",
+    "iframe-resizer-react": "1.0.4",
     "mdx-prism": "0.3.1",
     "next": "9.4.1",
     "next-google-fonts": "1.1.0",
@@ -76,9 +75,8 @@
     "globby": "11.0.0",
     "husky": "4.2.3",
     "lint-staged": "10.1.2",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "6.7.0",
     "prettier": "2.0.5",
-    "rehype": "10.0.0",
-    "tailwindcss": "^1.7.6"
+    "rehype": "10.0.0"
   }
 }
