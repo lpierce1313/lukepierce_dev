@@ -3,8 +3,10 @@
 ## Customizing
 
 - `/lib/constants.js`
+- `/public/robots.txt`
 - `/public/[resume].pdf`
 - `/public/static/images/og.jpg` (1280x720 px),
+- `/scripts/generate-sitemap.js`
 
 ## Overview
 
