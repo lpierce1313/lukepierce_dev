@@ -1,3 +1,10 @@
+import {
+  CONTACT_EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+  YOUTUBE_URL,
+} from "../lib/constants";
 import { Flex, IconButton, Link } from "@chakra-ui/core";
 
 import React from "react";
@@ -5,11 +12,7 @@ import React from "react";
 const Footer = () => (
   <Flex align="center" mb={4} direction="column">
     <div>
-      <Link
-        href="https://twitter.com/LukePie21946514"
-        title="Twitter"
-        isExternal
-      >
+      <Link href={TWITTER_URL} title="Twitter" isExternal>
         <IconButton
           aria-label="Twitter"
           icon="twitter"
@@ -18,7 +21,7 @@ const Footer = () => (
           variant="ghost"
         />
       </Link>
-      <Link href="https://github.com/lpierce1313" title="GitHub" isExternal>
+      <Link href={GITHUB_URL} title="GitHub" isExternal>
         <IconButton
           aria-label="GitHub"
           icon="github"
@@ -27,11 +30,7 @@ const Footer = () => (
           variant="ghost"
         />
       </Link>
-      <Link
-        href="https://www.linkedin.com/in/luke-pierce-840b315b//"
-        title="LinkedIn"
-        isExternal
-      >
+      <Link href={LINKEDIN_URL} title="LinkedIn" isExternal>
         <IconButton
           aria-label="LinkedIn"
           icon="linkedin"
@@ -40,11 +39,7 @@ const Footer = () => (
           variant="ghost"
         />
       </Link>
-      <Link
-        href="https://www.youtube.com/channel/UCq-k3wQb8Mqedk7baA_3TuQ"
-        title="YouTube"
-        isExternal
-      >
+      <Link href={YOUTUBE_URL} title="YouTube" isExternal>
         <IconButton
           aria-label="YouTube"
           icon="youtube"
@@ -53,7 +48,7 @@ const Footer = () => (
           variant="ghost"
         />
       </Link>
-      <Link href="mailto:lpierce1313@gmail.com" title="Email" isExternal>
+      <Link href={`mailto:${CONTACT_EMAIL}`} title="Email" isExternal>
         <IconButton
           aria-label="Email"
           icon="mail"
