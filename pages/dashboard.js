@@ -10,7 +10,6 @@ import {
 import Analytics from "../components/metrics/Analytics";
 import Buttondown from "../components/metrics/Buttondown";
 import Container from "../components/Container";
-import GitHub from "../components/metrics/Github";
 import { NextSeo } from "next-seo";
 import React from "react";
 import Unsplash from "../components/metrics/Unsplash";
@@ -74,9 +73,6 @@ const Dashboard = () => {
             <Unsplash />
             <SimpleGrid columns={[1, 1, 2]} spacing={4} mb={4}>
               <Analytics />
-              <GitHub />
-            </SimpleGrid>
-            <SimpleGrid columns={[1, 1, 2]} spacing={4} mb={4}>
               <Buttondown />
             </SimpleGrid>
           </Flex>

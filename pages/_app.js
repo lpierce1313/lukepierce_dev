@@ -1,20 +1,23 @@
-import React from "react";
-import { MDXProvider } from "@mdx-js/react";
-import { Global, css } from "@emotion/core";
-import { DefaultSeo } from "next-seo";
+import "../styles/index.css";
+
+import * as Fathom from "fathom-client";
+
 import {
-  ThemeProvider,
   CSSReset,
   ColorModeProvider,
+  ThemeProvider,
   useColorMode,
 } from "@chakra-ui/core";
-import Router from "next/router";
-import * as Fathom from "fathom-client";
-import theme from "../styles/theme";
-import { prismLightTheme, prismDarkTheme } from "../styles/prism";
+import { Global, css } from "@emotion/core";
+import { prismDarkTheme, prismLightTheme } from "../styles/prism";
+
+import { DefaultSeo } from "next-seo";
 import MDXComponents from "../components/MDXComponents";
+import { MDXProvider } from "@mdx-js/react";
+import React from "react";
+import Router from "next/router";
 import SEO from "../next-seo.config";
-import "../styles/index.css";
+import theme from "../styles/theme";
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
