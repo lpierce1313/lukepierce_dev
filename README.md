@@ -2,6 +2,7 @@
 
 ## Customizing
 
+- `package.json`
 - `/lib/constants.js`
 - `/public/robots.txt`
 - `/public/[resume].pdf`

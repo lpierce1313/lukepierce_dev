@@ -1,5 +1,3 @@
-import { HOST_URL } from "../lib/constants";
-
 const fs = require("fs");
 
 const globby = require("globby");
