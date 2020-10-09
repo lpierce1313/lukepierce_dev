@@ -1,17 +1,17 @@
-import React from "react";
-import { NextSeo } from "next-seo";
 import {
-  useColorMode,
-  Heading,
-  Text,
   Flex,
-  Stack,
-  Link,
+  Heading,
   Icon,
+  Link,
+  Stack,
+  Text,
+  useColorMode,
 } from "@chakra-ui/core";
 
 import Container from "../components/Container";
 import { CustomLink } from "../components/MDXComponents";
+import { NextSeo } from "next-seo";
+import React from "react";
 
 const url = "https://lukepierce.dev/about";
 const title = "About Me – Luke Pierce";
@@ -75,10 +75,10 @@ const About = () => {
               outdoors all of the time.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Someday, I would like to travel to atleast 50 different countries,
-              learn multiple languages, and visit every state in the United
-              States. Below, are places that I have travelled to so far, but
-              there will be many more to come.
+              Someday, I would like to travel to at least 50 different
+              countries, learn multiple languages, and visit every state in the
+              United States. Below, are places that I have travelled to so far,
+              but there will be many more to come.
             </Text>
             {/* <Text color={secondaryTextColor[colorMode]} mb={4}>
               At the beginning of 2020, I launched my most ambitious project – a
