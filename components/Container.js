@@ -1,10 +1,18 @@
+import {
+  Box,
+  Button,
+  Flex,
+  IconButton,
+  Link,
+  useColorMode,
+} from "@chakra-ui/core";
 import React, { useEffect } from "react";
-import NextLink from "next/link";
-import { useColorMode, Button, Flex, Box, IconButton } from "@chakra-ui/core";
-import { FaPen } from "react-icons/fa";
-import styled from "@emotion/styled";
 
+import { CONTACT_EMAIL } from "../lib/constants";
+// import { FaPen } from "react-icons/fa";
 import Footer from "./Footer";
+import NextLink from "next/link";
+import styled from "@emotion/styled";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -69,7 +77,7 @@ const Container = ({ children }) => {
               storeColor();
             }}
           />
-          <IconButton className="mx-2" aria-label="Doc Colors" icon={FaPen} />
+          {/* <IconButton className="mx-2" aria-label="Doc Colors" icon={FaPen} /> */}
         </Box>
         <Box>
           {/* <NextLink href="/dashboard" passHref>
@@ -87,15 +95,12 @@ const Container = ({ children }) => {
               About
             </Button>
           </NextLink>
-          <a
-            href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=lpierce1313@gmail.com"
-            passHref
-            target="_blank"
-          >
-            <Button as="a" variant="ghost" p={[1, 4]}>
+          {/* TODO */}
+          <Link href={`mailto:${CONTACT_EMAIL}`} title="Email" isExternal>
+            <Button variant="ghost" p={[1, 4]}>
               Contact
             </Button>
-          </a>
+          </Link>
         </Box>
       </StickyNav>
       <Flex
