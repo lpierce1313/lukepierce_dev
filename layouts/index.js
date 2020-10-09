@@ -1,24 +1,24 @@
-import React from 'react';
-import IframeResizer from 'iframe-resizer-react';
-import { parseISO, format } from 'date-fns';
+// TODO
+
 import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
   Avatar,
+  Box,
+  Flex,
+  Heading,
   Link,
-  Box
-} from '@chakra-ui/core';
+  Stack,
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
+import { format, parseISO } from "date-fns";
 
-import Container from '../components/Container';
-import Subscribe from '../components/Subscribe';
-import ViewCounter from '../components/ViewCounter';
-import BlogSeo from '../components/BlogSeo';
+import BlogSeo from "../components/BlogSeo";
+import Container from "../components/Container";
+import IframeResizer from "iframe-resizer-react";
+import React from "react";
+import Subscribe from "../components/Subscribe";
+import ViewCounter from "../components/ViewCounter";
 
-const editUrl = (slug) =>
-  `https://github.com/leerob/leerob.io/edit/master/pages/blog/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://leerob.io/blog/${slug}`
@@ -26,14 +26,14 @@ const discussUrl = (slug) =>
 
 export default (frontMatter) => {
   const slug = frontMatter.__resourcePath
-    .replace('blog/', '')
-    .replace('.mdx', '');
+    .replace("blog/", "")
+    .replace(".mdx", "");
 
   return ({ children }) => {
     const { colorMode } = useColorMode();
     const textColor = {
-      light: 'gray.700',
-      dark: 'gray.400'
+      light: "gray.700",
+      dark: "gray.400",
     };
 
     return (
@@ -60,8 +60,8 @@ export default (frontMatter) => {
             </Heading>
             <Flex
               justify="space-between"
-              align={['initial', 'center']}
-              direction={['column', 'row']}
+              align={["initial", "center"]}
+              direction={["column", "row"]}
               mt={2}
               w="100%"
               mb={4}
@@ -75,8 +75,8 @@ export default (frontMatter) => {
                 />
                 <Text fontSize="sm" color={textColor[colorMode]}>
                   {frontMatter.by}
-                  {'Lee Robinson / '}
-                  {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+                  {"Lee Robinson / "}
+                  {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
                 </Text>
               </Flex>
               <Text fontSize="sm" color="gray.500" minWidth="100px" mt={[2, 0]}>
@@ -90,11 +90,7 @@ export default (frontMatter) => {
           <Subscribe />
           <Box>
             <Link href={discussUrl(slug)} isExternal>
-              {'Discuss on Twitter'}
-            </Link>
-            {` • `}
-            <Link href={editUrl(slug)} isExternal>
-              {'Edit on GitHub'}
+              {"Discuss on Twitter"}
             </Link>
           </Box>
           <IframeResizer
@@ -102,8 +98,8 @@ export default (frontMatter) => {
             title="Comments"
             src={`https://fastfeedback.io/embed/BLspD6y8Bfn73LLm7nvW/${slug}?theme=${colorMode}`}
             style={{
-              width: '1px',
-              minWidth: '100%'
+              width: "1px",
+              minWidth: "100%",
             }}
           />
         </Stack>

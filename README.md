@@ -7,7 +7,9 @@
 - `/public/robots.txt`
 - `/public/[resume].pdf`
 - `/public/static/images/og.jpg` (1280x720 px),
+- `/public/static/favicons/*`,
 - `/scripts/generate-sitemap.js`
+- `/components/timeline.js`
 
 ## Overview
 

@@ -1,28 +1,30 @@
-import React from 'react';
-import { parseISO, format } from 'date-fns';
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Avatar
-} from '@chakra-ui/core';
+// TODO
 
-import Container from '../components/Container';
-import Subscribe from '../components/Subscribe';
-import BlogSeo from '../components/BlogSeo';
+import {
+  Avatar,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
+import { format, parseISO } from "date-fns";
+
+import BlogSeo from "../components/BlogSeo";
+import Container from "../components/Container";
+import React from "react";
+import Subscribe from "../components/Subscribe";
 
 export default (frontMatter) => {
   const slug = frontMatter.__resourcePath
-    .replace('newsletter/', '')
-    .replace('.mdx', '');
+    .replace("newsletter/", "")
+    .replace(".mdx", "");
 
   return ({ children }) => {
     const { colorMode } = useColorMode();
     const textColor = {
-      light: 'gray.700',
-      dark: 'gray.400'
+      light: "gray.700",
+      dark: "gray.400",
     };
 
     return (
@@ -52,8 +54,8 @@ export default (frontMatter) => {
             </Heading>
             <Flex
               justify="space-between"
-              align={['initial', 'center']}
-              direction={['column', 'row']}
+              align={["initial", "center"]}
+              direction={["column", "row"]}
               mt={2}
               w="100%"
               mb={4}
@@ -67,8 +69,8 @@ export default (frontMatter) => {
                 />
                 <Text fontSize="sm" color={textColor[colorMode]}>
                   {frontMatter.by}
-                  {'Lee Robinson / '}
-                  {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
+                  {"Lee Robinson / "}
+                  {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
                 </Text>
               </Flex>
               <Text fontSize="sm" color="gray.500" minWidth="100px" mt={[2, 0]}>
