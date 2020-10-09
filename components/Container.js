@@ -3,13 +3,13 @@ import {
   Button,
   Flex,
   IconButton,
+  Image,
   Link,
   useColorMode,
 } from "@chakra-ui/core";
 import React, { useEffect } from "react";
 
 import { CONTACT_EMAIL } from "../lib/constants";
-// import { FaPen } from "react-icons/fa";
 import Footer from "./Footer";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
@@ -35,10 +35,12 @@ const Container = ({ children }) => {
     light: "white",
     dark: "gray.900",
   };
+
   const primarytextColor = {
     light: "black",
     dark: "white",
   };
+
   const navBgColor = {
     light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(23, 25, 35, 0.8)",
@@ -68,26 +70,32 @@ const Container = ({ children }) => {
         mx="auto"
       >
         <Box>
-          <IconButton
-            className="mx-2"
-            aria-label="Toggle dark mode"
-            icon={colorMode === "dark" ? "sun" : "moon"}
-            onClick={() => {
-              toggleColorMode();
-              storeColor();
-            }}
-          />
-          {/* <IconButton className="mx-2" aria-label="Doc Colors" icon={FaPen} /> */}
+          <NextLink href="/" passHref>
+            {colorMode === "dark" ? (
+              <Image
+                className="pointer-hand"
+                height="75px"
+                htmlHeight="75px"
+                src="/static/images/signature-white.png"
+                title="Luke Pierce Signature"
+                alt="Luke Pierce Signature"
+              />
+            ) : (
+              <Image
+                className="pointer-hand"
+                height="75px"
+                htmlHeight="75px"
+                src="/static/images/signature-black.png"
+                title="Luke Pierce Signature"
+                alt="Luke Pierce Signature"
+              />
+            )}
+          </NextLink>
         </Box>
         <Box>
-          {/* <NextLink href="/dashboard" passHref>
+          <NextLink href="/dashboard" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Dashboard
-            </Button>
-          </NextLink> */}
-          <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Home
             </Button>
           </NextLink>
           <NextLink href="/about" passHref>
@@ -101,6 +109,15 @@ const Container = ({ children }) => {
               Contact
             </Button>
           </Link>
+          <IconButton
+            className="mx-2"
+            aria-label="Toggle dark mode"
+            icon={colorMode === "dark" ? "sun" : "moon"}
+            onClick={() => {
+              toggleColorMode();
+              storeColor();
+            }}
+          />
         </Box>
       </StickyNav>
       <Flex
