@@ -1,38 +1,42 @@
-import React from 'react';
-import { NextSeo, ArticleJsonLd } from 'next-seo';
+import { ArticleJsonLd, NextSeo } from "next-seo";
+import { FULL_NAME, HOST_URL } from "../lib/constants";
+
+import React from "react";
 
 const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
   const date = new Date(publishedAt).toISOString();
+
   const featuredImage = {
-    url: `https://leerob.io${image}`,
-    alt: title
+    url: `${HOST_URL}${image}`,
+    title: title,
+    alt: title,
   };
 
   return (
     <>
       <NextSeo
-        title={`${title} – Lee Robinson`}
+        title={`${title} – ${FULL_NAME}`}
         description={summary}
         canonical={url}
         openGraph={{
-          type: 'article',
+          type: "article",
           article: {
-            publishedTime: date
+            publishedTime: date,
           },
           url,
           title,
           description: summary,
-          images: [featuredImage]
+          images: [featuredImage],
         }}
       />
       <ArticleJsonLd
-        authorName="Lee Robinson"
+        authorName={FULL_NAME}
         dateModified={date}
         datePublished={date}
         description={summary}
         images={[featuredImage]}
         publisherLogo="/static/favicons/android-chrome-192x192.png"
-        publisherName="Lee Robinson"
+        publisherName={FULL_NAME}
         title={title}
         url={url}
       />

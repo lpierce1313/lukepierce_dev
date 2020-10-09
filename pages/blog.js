@@ -1,3 +1,4 @@
+import { FULL_NAME, HOST_URL } from "../lib/constants";
 import {
   Flex,
   Heading,
@@ -21,10 +22,11 @@ import { frontMatter as blogPosts } from "./blog/**/*.mdx";
 // import { frontMatter as stripeDesign } from "./blog/how-stripe-designs-beautiful-websites.mdx";
 // import { frontMatter as monorepo } from "./blog/monorepo-lerna-yarn-workspaces.mdx";
 
-const url = "https://lukepierce.dev/blog";
-const title = "Blog – Luke Pierce";
+const url = `${HOST_URL}/blog`;
+const title = `Blog – ${FULL_NAME}`;
+
 const description =
-  "Thoughts on the software industry, programming, tech, videography, music, and my personal life.";
+  "Thoughts on the software industry, programming, tech, photography, and my personal life.";
 
 const Blog = () => {
   const [searchValue, setSearchValue] = useState("");

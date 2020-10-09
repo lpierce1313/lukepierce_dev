@@ -11,7 +11,12 @@
 - `/public/static/favicons/*`,
 - `/scripts/generate-sitemap.js`
 - `/components/timeline.js`
+- `/components/container.js`
 - `pages/dashboard`
+- `pages/about`
+
+Note:
+Remove any social service you don't want from Footer.js
 
 ## Overview
 

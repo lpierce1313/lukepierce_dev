@@ -17,8 +17,7 @@ import Unsplash from "../components/metrics/Unsplash";
 
 const url = `${HOST_URL}/dashboard`;
 const title = `Dashboard – ${FULL_NAME}`;
-const description =
-  "My personal dashboard, built with Next.js API routes deployed as serverless functions.";
+const description = "My personal dashboard.";
 
 const Dashboard = () => {
   const { colorMode } = useColorMode();

@@ -1,5 +1,3 @@
-// TODO
-
 import {
   Avatar,
   Box,
@@ -10,18 +8,18 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/core";
+import { FULL_NAME, HOST_URL } from "../lib/constants";
 import { format, parseISO } from "date-fns";
 
 import BlogSeo from "../components/BlogSeo";
 import Container from "../components/Container";
-import IframeResizer from "iframe-resizer-react";
 import React from "react";
 import Subscribe from "../components/Subscribe";
 import ViewCounter from "../components/ViewCounter";
 
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://leerob.io/blog/${slug}`
+    `${HOST_URL}/blog/${slug}`
   )}`;
 
 export default (frontMatter) => {
@@ -38,7 +36,7 @@ export default (frontMatter) => {
 
     return (
       <Container>
-        <BlogSeo url={`https://leerob.io/blog/${slug}`} {...frontMatter} />
+        <BlogSeo url={`${HOST_URL}/blog/${slug}`} {...frontMatter} />
         <Stack
           as="article"
           spacing={8}
@@ -67,15 +65,16 @@ export default (frontMatter) => {
               mb={4}
             >
               <Flex align="center">
-                <Avatar
+                {/* TODO */}
+                {/* <Avatar
                   size="xs"
-                  name="Lee Robinson"
+                  name={FULL_NAME}
                   src="https://bit.ly/33vEjhB"
                   mr={2}
-                />
+                /> */}
                 <Text fontSize="sm" color={textColor[colorMode]}>
                   {frontMatter.by}
-                  {"Lee Robinson / "}
+                  {`${FULL_NAME} / `}
                   {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
                 </Text>
               </Flex>
@@ -93,15 +92,6 @@ export default (frontMatter) => {
               {"Discuss on Twitter"}
             </Link>
           </Box>
-          <IframeResizer
-            checkOrigin={false}
-            title="Comments"
-            src={`https://fastfeedback.io/embed/BLspD6y8Bfn73LLm7nvW/${slug}?theme=${colorMode}`}
-            style={{
-              width: "1px",
-              minWidth: "100%",
-            }}
-          />
         </Stack>
       </Container>
     );

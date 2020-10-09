@@ -1,16 +1,17 @@
-import React, { useState, useRef } from 'react';
-import { trackGoal } from 'fathom-client';
 import {
-  Heading,
-  InputGroup,
   Box,
-  Input,
-  InputRightElement,
   Button,
+  Heading,
+  Input,
+  InputGroup,
+  InputRightElement,
   Text,
+  useColorMode,
   useToast,
-  useColorMode
-} from '@chakra-ui/core';
+} from "@chakra-ui/core";
+import React, { useRef, useState } from "react";
+
+import { trackGoal } from "fathom-client";
 
 const Subscribe = () => {
   const [loading, setLoading] = useState(false);
@@ -18,26 +19,26 @@ const Subscribe = () => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: 'blue.50',
-    dark: 'blue.900'
+    light: "blue.50",
+    dark: "blue.900",
   };
   const borderColor = {
-    light: 'blue.200',
-    dark: 'blue.900'
+    light: "blue.200",
+    dark: "blue.900",
   };
 
   const subscribe = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch('/api/subscribe', {
+    const res = await fetch("/api/subscribe", {
       body: JSON.stringify({
-        email: inputEl.current.value
+        email: inputEl.current.value,
       }),
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      method: 'POST'
+      method: "POST",
     });
 
     setLoading(false);
@@ -45,24 +46,25 @@ const Subscribe = () => {
 
     if (error) {
       toast({
-        title: 'An error occurred.',
+        title: "An error occurred.",
         description: error,
-        status: 'error',
+        status: "error",
         duration: 3000,
-        isClosable: true
+        isClosable: true,
       });
 
       return;
     }
 
-    trackGoal('JYFUFMSF', 0);
-    inputEl.current.value = '';
+    // TODO
+    trackGoal("JYFUFMSF", 0);
+    inputEl.current.value = "";
     toast({
-      title: 'Success!',
-      description: 'You are now subscribed.',
-      status: 'success',
+      title: "Success!",
+      description: "You are now subscribed.",
+      status: "success",
       duration: 3000,
-      isClosable: true
+      isClosable: true,
     });
   };
 
@@ -86,7 +88,7 @@ const Subscribe = () => {
       <InputGroup size="md" mt={4}>
         <Input
           aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
+          placeholder="you@hey.com"
           ref={inputEl}
           type="email"
         />
