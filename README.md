@@ -10,6 +10,7 @@
 - `/public/static/favicons/*`,
 - `/scripts/generate-sitemap.js`
 - `/components/timeline.js`
+- `pages/dashboard`
 
 ## Overview
 

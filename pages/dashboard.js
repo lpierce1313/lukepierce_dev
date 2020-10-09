@@ -1,3 +1,4 @@
+import { FULL_NAME, HOST_URL } from "../lib/constants";
 import {
   Flex,
   Heading,
@@ -14,8 +15,8 @@ import { NextSeo } from "next-seo";
 import React from "react";
 import Unsplash from "../components/metrics/Unsplash";
 
-const url = "https://lukepierce.dev/dashboard";
-const title = "Dashboard – Luke Pierce";
+const url = `${HOST_URL}/dashboard`;
+const title = `Dashboard – ${FULL_NAME}`;
 const description =
   "My personal dashboard, built with Next.js API routes deployed as serverless functions.";
 
@@ -57,10 +58,9 @@ const Dashboard = () => {
               Dashboard
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>
-              This is my personal dashboard, built with Next.js API routes
-              deployed as serverless functions. I use this dashboard to track
-              various metrics across platforms like Unsplash, YouTube, GitHub,
-              and more. Want to build your own? Check out my&nbsp;
+              This is my personal dashboard. I use this dashboard to track
+              various metrics across platforms like Unsplash, my blog views, and
+              more.
             </Text>
           </Flex>
           <Flex

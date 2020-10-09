@@ -1,18 +1,17 @@
-import React from 'react';
-import useSWR from 'swr';
-import format from 'comma-number';
-import { SimpleGrid } from '@chakra-ui/core';
-
-import fetcher from '../../lib/fetcher';
-
-import MetricCard from './Card';
+import MetricCard from "./Card";
+import React from "react";
+import { SimpleGrid } from "@chakra-ui/core";
+import { UNSPLASH_USER } from "../../lib/constants";
+import fetcher from "../../lib/fetcher";
+import format from "comma-number";
+import useSWR from "swr";
 
 const Unsplash = () => {
-  const { data } = useSWR('/api/unsplash', fetcher);
+  const { data } = useSWR("/api/unsplash", fetcher);
 
   const downloads = format(data?.downloads);
   const views = format(data?.views);
-  const link = 'https://unsplash.com/@leerob';
+  const link = `https://unsplash.com/@${UNSPLASH_USER}`;
 
   return (
     <SimpleGrid columns={[1, 1, 2]} spacing={4} mb={4}>
