@@ -9,6 +9,7 @@ const useRerender = () => {
 const useTyped = (ref, options) => {
   const instance = React.useRef(null);
   const rerender = useRerender();
+
   React.useEffect(() => {
     if (ref.current === null) return;
     instance.current = new Typed(ref.current, options);

@@ -2,3 +2,21 @@ body {
   @apply p-12;
   padding: 0;
 }
+
+.pointer-hand {
+  cursor: pointer;
+  color: #0178df;
+}
+
+canvas.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  position: relative;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+}

@@ -61,20 +61,6 @@ const Index = () => {
             <span ref={introRef} />
           </Text>
           <br />
-
-          <a onClick={onOpen} className="">
-            Grab My Resume
-          </a>
-          <br />
-
-          {/* <a
-              className="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-              href="pierce-resume-2019.pdf"
-              download
-            >
-              Grab My Resume
-            </a> */}
-          <br />
           <div className="w-1/2">
             <div className="text-sm">
               I'm a Colorado based software engineer, full-stack developer and
@@ -84,7 +70,12 @@ const Index = () => {
               <br />
               <br />
               Currently working full-time as a Software Engineer & front-end dev
-              at Raytheon, a well known defense contractor.
+              at Raytheon, a well known defense contractor. You can get my
+              resume{" "}
+              <a onClick={onOpen} className="pointer-hand">
+                here
+              </a>
+              !
             </div>
           </div>
         </div>
@@ -136,23 +127,24 @@ const Index = () => {
         <Timeline />
         {/* <Subscribe /> */}
       </Stack>
+
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{FULL_NAME} Resume 2020</ModalHeader>
-          <ModalCloseButton />
-          <ModalFooter>
-            <Button className="mx-2" variant="ghost">
-              <a href="pierce-resume-2019.pdf" download>
-                Save as PDF
+          <ModalHeader>Glad you're wanting to learn more!</ModalHeader>
+          <ModalBody>
+            <Text fontSize="1xl">
+              You can find my resume in the following formats:
+            </Text>
+            <br />
+            <Button className="mx-2">
+              <a href="luke-pierce-resume.pdf" download>
+                Download PDF
               </a>
             </Button>
-            <Button
-              className="mx-2"
-              variantColor="blue"
-              mr={3}
-              onClick={onClose}
-            >
+          </ModalBody>
+          <ModalFooter>
+            <Button className="mx-2" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>

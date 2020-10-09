@@ -7,10 +7,11 @@ import {
 } from "../lib/constants";
 import { Flex, IconButton, Link } from "@chakra-ui/core";
 
-import React from "react";
+import InteractiveDots from "../components/InteractiveDots";
 
 const Footer = () => (
   <Flex align="center" mb={4} direction="column">
+    <InteractiveDots />
     <div>
       <Link href={TWITTER_URL} title="Twitter" isExternal>
         <IconButton
