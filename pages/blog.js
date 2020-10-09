@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { NextSeo } from "next-seo";
 import {
-  useColorMode,
-  Heading,
-  Text,
   Flex,
-  Stack,
+  Heading,
+  Icon,
   Input,
   InputGroup,
   InputRightElement,
-  Icon,
+  Stack,
+  Text,
+  useColorMode,
 } from "@chakra-ui/core";
+import React, { useState } from "react";
 
-import Container from "../components/Container";
 import BlogPost from "../components/BlogPost";
-
+import Container from "../components/Container";
+import { NextSeo } from "next-seo";
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as blogPosts } from "./blog/**/*.mdx";
-import { frontMatter as styleGuides } from "./blog/style-guides-component-libraries-design-systems.mdx";
-import { frontMatter as stripeDesign } from "./blog/how-stripe-designs-beautiful-websites.mdx";
-import { frontMatter as monorepo } from "./blog/monorepo-lerna-yarn-workspaces.mdx";
+
+// import { frontMatter as styleGuides } from "./blog/style-guides-component-libraries-design-systems.mdx";
+// import { frontMatter as stripeDesign } from "./blog/how-stripe-designs-beautiful-websites.mdx";
+// import { frontMatter as monorepo } from "./blog/monorepo-lerna-yarn-workspaces.mdx";
 
 const url = "https://lukepierce.dev/blog";
 const title = "Blog – Luke Pierce";
@@ -100,9 +100,9 @@ const Blog = () => {
               <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
                 Most Popular
               </Heading>
-              <BlogPost {...styleGuides} />
+              {/* <BlogPost {...styleGuides} />
               <BlogPost {...stripeDesign} />
-              <BlogPost {...monorepo} />
+              <BlogPost {...monorepo} /> */}
             </Flex>
           )}
           <Flex
