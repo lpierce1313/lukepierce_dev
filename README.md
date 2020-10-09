@@ -3,6 +3,7 @@
 ## Customizing
 
 - `package.json`
+- `vercel.json`
 - `/lib/constants.js`
 - `/public/robots.txt`
 - `/public/[resume].pdf`
