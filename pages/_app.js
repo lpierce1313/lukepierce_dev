@@ -9,12 +9,12 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 import { Global, css } from "@emotion/core";
+import React, { useEffect } from "react";
 import { prismDarkTheme, prismLightTheme } from "../styles/prism";
 
 import { DefaultSeo } from "next-seo";
 import MDXComponents from "../components/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
-import React from "react";
 import Router from "next/router";
 import SEO from "../next-seo.config";
 import theme from "../styles/theme";
