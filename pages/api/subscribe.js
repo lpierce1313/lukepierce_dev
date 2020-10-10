@@ -2,7 +2,7 @@ export default async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: "Email is required" });
   }
 
   try {
@@ -12,31 +12,31 @@ export default async (req, res) => {
       {
         body: JSON.stringify({
           email,
-          tags: ['leerob.io']
+          tags: ["lukepierce.dev"],
         }),
         headers: {
           Authorization: `Token ${API_KEY}`,
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        method: 'POST'
+        method: "POST",
       }
     );
 
     if (response.status >= 400) {
       const text = await response.text();
 
-      if (text.includes('already subscribed')) {
+      if (text.includes("already subscribed")) {
         return res.status(400).json({
-          error: `You're already subscribed to my mailing list.`
+          error: `You're already subscribed to my mailing list.`,
         });
       }
 
       return res.status(400).json({
-        error: text
+        error: text,
       });
     }
 
-    return res.status(201).json({ error: '' });
+    return res.status(201).json({ error: "" });
   } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() });
   }
