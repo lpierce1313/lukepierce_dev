@@ -56,6 +56,14 @@ Router.events.on("routeChangeComplete", () => {
 });
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production") {
+      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
+        includedDomains: ["lukepierce.dev"],
+      });
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>

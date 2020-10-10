@@ -14,6 +14,7 @@
 - `/components/container.js`
 - `pages/dashboard`
 - `pages/about`
+- `_app.js`
 
 Note:
 Remove any social service you don't want from Footer.js
