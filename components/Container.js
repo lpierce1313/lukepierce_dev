@@ -6,9 +6,19 @@ import {
   Image,
   Link,
   useColorMode,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Text,
+  useDisclosure,
 } from "@chakra-ui/core";
 import React, { useEffect } from "react";
 
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { CONTACT_EMAIL } from "../lib/constants";
 import Footer from "./Footer";
 import NextLink from "next/link";
@@ -24,7 +34,7 @@ const StickyNav = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   useEffect(() => {
     if (colorMode !== localStorage.getItem("theme")) {
       toggleColorMode();
@@ -104,7 +114,7 @@ const Container = ({ children }) => {
             </Button>
           </NextLink>
           {/* TODO */}
-          <Link href={`mailto:${CONTACT_EMAIL}`} title="Email" isExternal>
+          <Link title="Email" onClick={onOpen} isExternal>
             <Button variant="ghost" p={[1, 4]}>
               Contact
             </Button>
@@ -130,6 +140,34 @@ const Container = ({ children }) => {
       >
         {children}
         <Footer />
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>You can contact me here!</ModalHeader>
+            <ModalBody>
+              <Text fontSize="1xl">
+                Email:{" "}
+                <Link
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {CONTACT_EMAIL}
+                </Link>
+              </Text>
+            </ModalBody>
+            <ModalFooter>
+              <CopyToClipboard text={CONTACT_EMAIL}>
+                <Button className="mx-2" mr={3}>
+                  Copy to Clipboard
+                </Button>
+              </CopyToClipboard>
+              <Button className="mx-2" mr={3} onClick={onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Flex>
     </>
   );
