@@ -16,6 +16,7 @@
 - `pages/about`
 - `_app.js`
 - `api/subscribe.js`
+- `lib/db.js`
 
 Note:
 Remove any social service you don't want from Footer.js
