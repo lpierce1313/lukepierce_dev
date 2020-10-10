@@ -35,11 +35,6 @@ const StickyNav = styled(Flex)`
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  useEffect(() => {
-    if (colorMode !== localStorage.getItem("theme")) {
-      toggleColorMode();
-    }
-  }, []);
 
   const bgColor = {
     light: "white",
