@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/core";
 import React, { useRef, useState } from "react";
 
+import { FATHOM_SUBSCRIBE_GOAL } from "../lib/constants";
 import { trackGoal } from "fathom-client";
 
 const Subscribe = () => {
@@ -56,9 +57,10 @@ const Subscribe = () => {
       return;
     }
 
-    // TODO
-    trackGoal("JYFUFMSF", 0);
+    trackGoal(FATHOM_SUBSCRIBE_GOAL, 0);
+
     inputEl.current.value = "";
+
     toast({
       title: "Success!",
       description: "You are now subscribed.",
