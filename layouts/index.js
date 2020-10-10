@@ -65,13 +65,12 @@ export default (frontMatter) => {
               mb={4}
             >
               <Flex align="center">
-                {/* TODO */}
-                {/* <Avatar
+                <Avatar
                   size="xs"
                   name={FULL_NAME}
-                  src="https://bit.ly/33vEjhB"
+                  src="/static/images/luke.png"
                   mr={2}
-                /> */}
+                />
                 <Text fontSize="sm" color={textColor[colorMode]}>
                   {frontMatter.by}
                   {`${FULL_NAME} / `}
