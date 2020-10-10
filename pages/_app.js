@@ -9,12 +9,12 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 import { Global, css } from "@emotion/core";
+import React, { useEffect } from "react";
 import { prismDarkTheme, prismLightTheme } from "../styles/prism";
 
 import { DefaultSeo } from "next-seo";
 import MDXComponents from "../components/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
-import React from "react";
 import Router from "next/router";
 import SEO from "../next-seo.config";
 import theme from "../styles/theme";
@@ -56,6 +56,14 @@ Router.events.on("routeChangeComplete", () => {
 });
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production") {
+      Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID, {
+        includedDomains: ["lukepierce.dev"],
+      });
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
