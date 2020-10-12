@@ -67,19 +67,23 @@ function Map({
     if (colorMode === "dark") {
       // Configure Background Color
       chart.current.background.fill = am4core.color("#171923");
+      chart.current.background.stroke = am4core.color("#FFFFFF");
       chart.current.background.fillOpacity = 1;
 
       // Configure series
       let polygonTemplate = polygonSeries.mapPolygons.template;
       polygonTemplate.fill = am4core.color("#D7DEE9");
+      polygonTemplate.stroke = am4core.color("#A0AEC0");
     } else {
       // Configure Background Color
       chart.current.background.fill = am4core.color("#FFFFFF");
+      chart.current.background.stroke = am4core.color("#A0AEC0");
       chart.current.background.fillOpacity = 1;
 
       // Configure series
       let polygonTemplate = polygonSeries.mapPolygons.template;
       polygonTemplate.fill = am4core.color("#D7DEE9");
+      polygonTemplate.stroke = am4core.color("#A0AEC0");
     }
 
     /* States */

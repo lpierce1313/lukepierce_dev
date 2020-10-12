@@ -19,6 +19,7 @@ const Map = dynamic(() => import("../components/Map"), {
 const About = () => {
   const isTouchDevice = useMobile();
   const { colorMode } = useColorMode();
+
   const secondaryTextColor = {
     light: "gray.700",
     dark: "gray.400",
@@ -99,14 +100,16 @@ const About = () => {
             {loading ? (
               <Skeleton height={400} width={700} />
             ) : (
-              <Map
-                colorMode={colorMode}
-                showZoom={false}
-                mobile={isTouchDevice}
-                mapType={"usaAlbersLow"}
-                seriesOneFill={"#C5B36D"}
-                seriesOneStroke={"#000000"}
-              />
+              <span>
+                <Map
+                  colorMode={colorMode}
+                  showZoom={false}
+                  mobile={isTouchDevice}
+                  mapType={"usaAlbersLow"}
+                  seriesOneFill={"#C5B36D"}
+                  seriesOneStroke={"#000000"}
+                />
+              </span>
             )}
           </Flex>
         </Stack>
