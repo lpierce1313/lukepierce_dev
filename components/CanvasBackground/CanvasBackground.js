@@ -8,7 +8,7 @@ export default class CanvasBackground extends React.Component {
     this.lastX = null;
     this.lastY = null;
     this.dots = [];
-    this.shouldAnimate = false;
+    this.shouldAnimate = true;
 
     this.state = {
       cw: null,
@@ -140,7 +140,7 @@ export default class CanvasBackground extends React.Component {
       const timeout = this.props.animationDuration * 1000 + 100; // Stop refresh after animation duration + 100ms
       setTimeout(() => {
         this.shouldAnimate = false;
-      }, 500);
+      }, 1000);
     });
 
     window.addEventListener("resize", this.setSize);

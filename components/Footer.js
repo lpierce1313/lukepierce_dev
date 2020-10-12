@@ -7,14 +7,7 @@ import {
 } from "../lib/constants";
 import { Flex, IconButton, Link, useColorMode } from "@chakra-ui/core";
 
-import dynamic from "next/dynamic";
-
-const InteractiveDots = dynamic(
-  () => import("../components/InteractiveDotsNoSSR"),
-  {
-    ssr: false,
-  }
-);
+import InteractiveDots from "../components/CanvasBackground/CanvasBackground";
 
 const Footer = () => {
   const { colorMode } = useColorMode();
@@ -79,7 +72,7 @@ const Footer = () => {
         dotSmall={4}
         dotLarge={25}
         hoverRadius={60}
-        animationDuration={0.3}
+        animationDuration={0.4}
       />
     </Flex>
   );
