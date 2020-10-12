@@ -14,6 +14,7 @@ am4core.useTheme(am4themes_animated);
 function Map({
   colorMode,
   showZoom,
+  mobile,
   mapType,
   seriesOneFill,
   seriesOneStroke,
@@ -37,6 +38,10 @@ function Map({
     chart.current.projection = new am4maps.projections.Miller();
 
     chart.current.hiddenState.properties.opacity = 0;
+
+    if (mobile) {
+      chart.chartContainer.wheelable = false;
+    }
 
     // Zoom Level
     chart.current.homeZoomLevel = 0.25;
@@ -132,7 +137,14 @@ function Map({
     return () => {
       chart.current.dispose();
     };
-  }, [colorMode, mapType, seriesOneFill, seriesOneStroke, seriesOneLocations]);
+  }, [
+    colorMode,
+    mapType,
+    mobile,
+    seriesOneFill,
+    seriesOneStroke,
+    seriesOneLocations,
+  ]);
 
   return (
     <>
@@ -158,6 +170,7 @@ function Map({
 Map.propTypes = {
   colorMode: PropTypes.string,
   showZoom: PropTypes.bool,
+  mobile: PropTypes.bool,
   mapType: PropTypes.string,
   seriesOneFill: PropTypes.string,
   seriesOneLocations: PropTypes.array,

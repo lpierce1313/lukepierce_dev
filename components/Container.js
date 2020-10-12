@@ -5,21 +5,20 @@ import {
   IconButton,
   Image,
   Link,
-  useColorMode,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
-  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   Text,
+  useColorMode,
   useDisclosure,
 } from "@chakra-ui/core";
 import React, { useEffect } from "react";
 
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { CONTACT_EMAIL } from "../lib/constants";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import Footer from "./Footer";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
@@ -83,7 +82,6 @@ const Container = ({ children }) => {
                 htmlHeight="75px"
                 src="/static/images/signature-white.png"
                 title="Luke Pierce Signature"
-                alt="Luke Pierce Signature"
               />
             ) : (
               <Image
@@ -92,7 +90,6 @@ const Container = ({ children }) => {
                 htmlHeight="75px"
                 src="/static/images/signature-black.png"
                 title="Luke Pierce Signature"
-                alt="Luke Pierce Signature"
               />
             )}
           </NextLink>

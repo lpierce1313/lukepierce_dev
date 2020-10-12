@@ -1,25 +1,37 @@
 import { FULL_NAME, HOST_URL } from "../lib/constants";
 import { Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/core";
+import React, { useEffect, useState } from "react";
 
 import Container from "../components/Container";
 import { NextSeo } from "next-seo";
 import Skeleton from "react-loading-skeleton";
 import dynamic from "next/dynamic";
+import useMobile from "../components/useMobile";
 
 const url = `${HOST_URL}/about`;
 const title = `About Me – ${FULL_NAME}`;
 
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false,
-  loading: () => <Skeleton height={400} width={800} />,
+  loading: () => <Skeleton height={400} width={700} />,
 });
 
 const About = () => {
+  const isTouchDevice = useMobile();
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: "gray.700",
     dark: "gray.400",
   };
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(function () {
+      setLoading(false);
+    }, 400);
+  }, [colorMode]);
 
   return (
     <>
@@ -38,13 +50,13 @@ const About = () => {
           justifyContent="center"
           alignItems="flex-start"
           m="0 auto 4rem auto"
-          maxWidth="800px"
+          maxWidth="700px"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
-            maxWidth="800px"
+            maxWidth="700px"
           >
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               About Me
@@ -81,13 +93,18 @@ const About = () => {
             <Heading letterSpacing="tight" mb={2} as="h2" size="2xl">
               My US Travels
             </Heading>
-            <Map
-              colorMode={colorMode}
-              showZoom={false}
-              mapType={"usaAlbersLow"}
-              seriesOneFill={"#C5B36D"}
-              seriesOneStroke={"#000000"}
-            />
+            {loading ? (
+              <Skeleton height={400} width={700} />
+            ) : (
+              <Map
+                colorMode={colorMode}
+                showZoom={false}
+                mobile={isTouchDevice}
+                mapType={"usaAlbersLow"}
+                seriesOneFill={"#C5B36D"}
+                seriesOneStroke={"#000000"}
+              />
+            )}
           </Flex>
         </Stack>
       </Container>
