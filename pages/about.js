@@ -1,21 +1,18 @@
 import { FULL_NAME, HOST_URL } from "../lib/constants";
-import {
-  Flex,
-  Heading,
-  Icon,
-  Link,
-  Stack,
-  Text,
-  useColorMode,
-} from "@chakra-ui/core";
+import { Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 import Container from "../components/Container";
-import { CustomLink } from "../components/MDXComponents";
 import { NextSeo } from "next-seo";
-import React from "react";
+import Skeleton from "react-loading-skeleton";
+import dynamic from "next/dynamic";
 
 const url = `${HOST_URL}/about`;
 const title = `About Me – ${FULL_NAME}`;
+
+const Map = dynamic(() => import("../components/Map"), {
+  ssr: false,
+  loading: () => <Skeleton height={400} width={800} />,
+});
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -41,13 +38,13 @@ const About = () => {
           justifyContent="center"
           alignItems="flex-start"
           m="0 auto 4rem auto"
-          maxWidth="700px"
+          maxWidth="800px"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
-            maxWidth="700px"
+            maxWidth="800px"
           >
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               About Me
@@ -81,11 +78,15 @@ const About = () => {
               United States. Below, are places that I have travelled to so far,
               but there will be many more to come.
             </Text>
-            <iframe
-              height="280"
-              src="https://www.google.com/maps/d/u/0/embed?mid=1v2GHUFad-oc6_8EO4RU8-90wE90-0HH2"
-              title="Luke's Travel Map"
-              width="100%"
+            <Heading letterSpacing="tight" mb={2} as="h2" size="2xl">
+              My US Travels
+            </Heading>
+            <Map
+              colorMode={colorMode}
+              showZoom={false}
+              mapType={"usaAlbersLow"}
+              seriesOneFill={"#C5B36D"}
+              seriesOneStroke={"#000000"}
             />
           </Flex>
         </Stack>
