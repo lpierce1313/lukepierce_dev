@@ -5,7 +5,7 @@ import {
   TWITTER_URL,
   YOUTUBE_URL,
 } from "../lib/constants";
-import { Flex, IconButton, Link } from "@chakra-ui/core";
+import { Flex, IconButton, Link, useColorMode } from "@chakra-ui/core";
 
 import dynamic from "next/dynamic";
 
@@ -17,9 +17,15 @@ const InteractiveDots = dynamic(
 );
 
 const Footer = () => {
+  const { colorMode } = useColorMode();
+
+  const divStyle = {
+    backgroundColor: colorMode === "dark" ? "#171923" : "white",
+  };
+
   return (
     <Flex align="center" mb={4} direction="column">
-      <div className="social-media-icons-card">
+      <div className="social-media-icons-card" style={divStyle}>
         <Link href={TWITTER_URL} title="Twitter" isExternal>
           <IconButton
             aria-label="Twitter"
