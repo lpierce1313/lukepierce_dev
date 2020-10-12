@@ -67,12 +67,12 @@ const About = () => {
               Engineering degree at the top of my class. I decided after I
               completed my degree that I did not have a passion for Electrical
               Engineering even though I understood it very well. Web development
-              is my passion, I taught myself HTML5, CSS, JavaScript, Ruby on
-              Rails, React, NextJS, Python, NodeJS. My favorite language being
-              NextJS which is one this portfolio is made from. I hope someday
-              that I can live in a apartment/town home in downtown Denver, have
-              amazing city views, and work for a small startup as a front-end
-              web developer.
+              is my passion, I taught myself <Text as="mark">HTML5</Text> , CSS,
+              JavaScript, Ruby on Rails, React, NextJS, Python, NodeJS. My
+              favorite language being NextJS which is one this portfolio is made
+              from. I hope someday that I can live in a apartment/town home in
+              downtown Denver, have amazing city views, and work for a small
+              startup as a front-end web developer.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               Aside from programming, I am very passionate about fitness and
