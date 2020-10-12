@@ -40,7 +40,7 @@ function Map({
     chart.current.hiddenState.properties.opacity = 0;
 
     if (mobile) {
-      chart.chartContainer.wheelable = false;
+      chart.current.chartContainer.wheelable = false;
     }
 
     // Zoom Level
