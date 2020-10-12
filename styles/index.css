@@ -7,3 +7,13 @@ body {
   cursor: pointer;
   color: #0178df;
 }
+
+.social-media-icons-card {
+  background-color: white;
+  position: relative;
+  top: 225px;
+  box-shadow: 4px 4px #718096;
+  padding: 20px;
+  z-index: 999;
+  border: 2px solid #718096;
+}

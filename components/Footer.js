@@ -7,9 +7,18 @@ import {
 } from "../lib/constants";
 import { Flex, IconButton, Link } from "@chakra-ui/core";
 
+import dynamic from "next/dynamic";
+
+const InteractiveDots = dynamic(
+  () => import("../components/InteractiveDotsNoSSR"),
+  {
+    ssr: false,
+  }
+);
+
 const Footer = () => (
   <Flex align="center" mb={4} direction="column">
-    <div>
+    <div className="social-media-icons-card">
       <Link href={TWITTER_URL} title="Twitter" isExternal>
         <IconButton
           aria-label="Twitter"
@@ -56,6 +65,12 @@ const Footer = () => (
         />
       </Link>
     </div>
+    <InteractiveDots
+      dotSmall={4}
+      dotLarge={25}
+      hoverRadius={45}
+      animationDuration={0.4}
+    />
   </Flex>
 );
 
