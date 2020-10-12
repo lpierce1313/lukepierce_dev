@@ -15,16 +15,25 @@ export class Dot {
     this.originalY = y;
   }
 
-  update = (ctx, dotSmall, lastX, lastY, hoverRadius, animationDuration) => {
+  update = (
+    ctx,
+    dotSmall,
+    lastX,
+    lastY,
+    hoverRadius,
+    animationDuration,
+    fillStyleActive,
+    fillStyleInactive
+  ) => {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     ctx.closePath();
 
     // Style of the dot
     if (this.inHoverRadius) {
-      ctx.fillStyle = "#C5B36D";
+      ctx.fillStyle = fillStyleActive;
     } else {
-      ctx.fillStyle = "#e2e5e9";
+      ctx.fillStyle = fillStyleInactive;
     }
     ctx.fill();
 

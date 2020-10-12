@@ -8,12 +8,26 @@ body {
   color: #0178df;
 }
 
+canvas.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  position: relative;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+}
+
 .social-media-icons-card {
   background-color: white;
   position: relative;
   top: 225px;
-  box-shadow: 4px 4px #718096;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
   z-index: 999;
   border: 2px solid #718096;
+  border-radius: 5px;
 }

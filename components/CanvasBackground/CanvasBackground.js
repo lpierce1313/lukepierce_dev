@@ -8,6 +8,7 @@ export default class CanvasBackground extends React.Component {
     this.lastX = null;
     this.lastY = null;
     this.dots = [];
+    this.shouldAnimate = false;
 
     this.state = {
       cw: null,
@@ -19,22 +20,21 @@ export default class CanvasBackground extends React.Component {
   componentDidMount() {
     this.addListeners();
     this.addShims();
-
-    this.setState({
-      cw: window.innerWidth - 18,
-      ch: 350,
-    });
+    this.setSize();
   }
+
+  componentWillUnmount() {}
 
   // Run it every time the props change
   componentDidUpdate() {
+    this.canvasRef.current.width = this.state.cw;
+    this.canvasRef.current.height = this.state.ch;
+
     this.renderCanvas();
   }
 
   render() {
-    const { cw, ch } = this.state;
-
-    return <canvas ref={this.canvasRef} width={cw} height={ch} />;
+    return <canvas ref={this.canvasRef} />;
   }
 
   // Add a new dot
@@ -52,11 +52,22 @@ export default class CanvasBackground extends React.Component {
 
   // Clear the canvas and draw the new frame
   draw = () => {
-    const { dotSmall, hoverRadius, animationDuration } = this.props;
+    const {
+      dotSmall,
+      hoverRadius,
+      animationDuration,
+      fillStyleActive,
+      fillStyleInactive,
+    } = this.props;
 
     const { cw, ch } = this.state;
 
     const c = this.canvasRef.current;
+
+    if (c == null) {
+      return;
+    }
+
     const ctx = c.getContext("2d");
 
     ctx.clearRect(0, 0, cw, ch);
@@ -69,11 +80,19 @@ export default class CanvasBackground extends React.Component {
         this.lastX,
         this.lastY,
         hoverRadius,
-        animationDuration
+        animationDuration,
+        fillStyleActive,
+        fillStyleInactive
       );
     }
 
-    window.requestAnimFrame(this.draw);
+    // Do not animate if not needed
+    // this is a recursive call which keeps refreshing the app
+    // Resizing the window creates multiple of these recursions
+    // which will make the app behave unexpectedly
+    if (this.shouldAnimate) {
+      window.requestAnimFrame(this.draw);
+    }
   };
 
   renderCanvas = () => {
@@ -112,11 +131,34 @@ export default class CanvasBackground extends React.Component {
       false
     );
 
-    window.addEventListener("resize", () => {
-      this.setState({
-        cw: window.innerWidth,
-        ch: window.innerHeight,
-      });
+    document.body.addEventListener("mouseenter", () => {
+      this.shouldAnimate = true;
+      this.draw();
+    });
+
+    document.body.addEventListener("mouseleave", () => {
+      const timeout = this.props.animationDuration * 1000 + 100; // Stop refresh after animation duration + 100ms
+      setTimeout(() => {
+        this.shouldAnimate = false;
+      }, 500);
+    });
+
+    window.addEventListener("resize", this.setSize);
+  };
+
+  setSize = () => {
+    const cw =
+      this.props.overrideWidth == null
+        ? window.innerWidth
+        : this.props.overrideWidth;
+    const ch =
+      this.props.overrideHeight == null
+        ? window.innerHeight
+        : this.props.overrideHeight;
+
+    this.setState({
+      cw,
+      ch,
     });
   };
 

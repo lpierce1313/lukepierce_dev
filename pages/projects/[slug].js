@@ -20,7 +20,6 @@ const title = `Newsletter – ${FULL_NAME}`;
 const description = "";
 
 export default function Project({ project }) {
-  console.log(project);
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: "gray.700",
