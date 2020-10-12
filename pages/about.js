@@ -13,7 +13,7 @@ const title = `About Me – ${FULL_NAME}`;
 
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false,
-  loading: () => <Skeleton height={400} width={700} />,
+  loading: () => <Skeleton height={650} width={700} />,
 });
 
 const About = () => {
@@ -98,18 +98,33 @@ const About = () => {
               My US Travels
             </Heading>
             {loading ? (
-              <Skeleton height={400} width={700} />
+              <Skeleton height={650} width={700} />
             ) : (
-              <span>
-                <Map
-                  colorMode={colorMode}
-                  showZoom={false}
-                  mobile={isTouchDevice}
-                  mapType={"usaAlbersLow"}
-                  seriesOneFill={"#C5B36D"}
-                  seriesOneStroke={"#000000"}
-                />
-              </span>
+              <Map
+                name="us"
+                colorMode={colorMode}
+                showZoom={false}
+                mobile={isTouchDevice}
+                mapType={"usaAlbersLow"}
+                seriesOneFill={"#C5B36D"}
+                seriesOneStroke={"#000000"}
+              />
+            )}
+            <Heading letterSpacing="tight" mt={5} mb={2} as="h2" size="2xl">
+              My World Travels
+            </Heading>
+            {loading ? (
+              <Skeleton height={650} width={700} />
+            ) : (
+              <Map
+                name="world"
+                colorMode={colorMode}
+                showZoom={true}
+                mobile={isTouchDevice}
+                mapType={"worldLow"}
+                seriesOneFill={"#C5B36D"}
+                seriesOneStroke={"#000000"}
+              />
             )}
           </Flex>
         </Stack>

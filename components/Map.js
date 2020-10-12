@@ -1,8 +1,8 @@
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 
+import { COUNTRIES, STATES, US_CITIES, WORLD_CITIES } from "../lib/constants";
 import React, { useEffect, useRef, useState } from "react";
-import { STATES, US_CITIES } from "../lib/constants";
 
 import PropTypes from "prop-types";
 import am4geodata_usaAlbersLow from "@amcharts/amcharts4-geodata/usaAlbersLow";
@@ -12,6 +12,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 am4core.useTheme(am4themes_animated);
 
 function Map({
+  name,
   colorMode,
   showZoom,
   mobile,
@@ -25,7 +26,7 @@ function Map({
   useEffect(() => {
     am4core.useTheme(am4themes_animated); // Theme
 
-    chart.current = am4core.create("chartdiv", am4maps.MapChart);
+    chart.current = am4core.create(name, am4maps.MapChart);
 
     chart.current.responsive.enabled = true; // Responsive
 
@@ -88,9 +89,16 @@ function Map({
 
     /* States */
     let states = chart.current.series.push(new am4maps.MapPolygonSeries());
-    states.name = "States";
+
+    if (name === "world") {
+      states.name = "Countries";
+      states.include = COUNTRIES;
+    } else {
+      states.name = "States";
+      states.include = STATES;
+    }
+
     states.useGeodata = true;
-    states.include = STATES;
     states.mapPolygons.template.tooltipText = "{name}";
     states.mapPolygons.template.fill = am4core.color("#14375F");
     states.fill = am4core.color("#14375F");
@@ -116,7 +124,11 @@ function Map({
     seriesOneTemplate.propertyFields.latitude = "latitude";
     seriesOneTemplate.propertyFields.longitude = "longitude";
 
-    seriesOne.data = US_CITIES;
+    if (name === "world") {
+      seriesOne.data = WORLD_CITIES;
+    } else {
+      seriesOne.data = US_CITIES;
+    }
 
     // Legend
     chart.current.legend = new am4maps.Legend();
@@ -144,6 +156,7 @@ function Map({
       chart.current.dispose();
     };
   }, [
+    name,
     colorMode,
     mapType,
     mobile,
@@ -152,10 +165,11 @@ function Map({
     seriesOneLocations,
   ]);
 
-  return <div id="chartdiv" style={{ height: mobile ? "350px" : "650px" }} />;
+  return <div id={name} style={{ height: mobile ? "350px" : "650px" }} />;
 }
 
 Map.propTypes = {
+  name: PropTypes.string,
   colorMode: PropTypes.string,
   showZoom: PropTypes.bool,
   mobile: PropTypes.bool,
