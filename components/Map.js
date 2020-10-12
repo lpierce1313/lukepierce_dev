@@ -41,6 +41,8 @@ function Map({
 
     if (mobile) {
       chart.current.chartContainer.wheelable = false;
+      chart.current.chartContainer.draggable = false;
+      chart.current.chartContainer.resizable = false;
     }
 
     // Zoom Level
