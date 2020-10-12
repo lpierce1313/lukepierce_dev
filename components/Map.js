@@ -82,7 +82,7 @@ function Map({
 
     /* States */
     let states = chart.current.series.push(new am4maps.MapPolygonSeries());
-    states.name = "Visited States";
+    states.name = "States";
     states.useGeodata = true;
     states.include = STATES;
     states.mapPolygons.template.tooltipText = "{name}";
@@ -146,25 +146,7 @@ function Map({
     seriesOneLocations,
   ]);
 
-  return (
-    <>
-      <style jsx>{`
-        .amcharts-amexport-item.amcharts-amexport-item-level-0 {
-          width: 100px;
-        }
-      `}</style>
-      <div className="card">
-        <div className="card-content columns">
-          <div
-            id="chartdiv"
-            className="column is-full-mobile is-full-tablet is-half-desktop"
-            style={{ height: "650px" }}
-          />
-          <div className="column is-full-mobile is-full-tablet is-half-desktop"></div>
-        </div>
-      </div>
-    </>
-  );
+  return <div id="chartdiv" style={{ height: mobile ? "350px" : "650px" }} />;
 }
 
 Map.propTypes = {
