@@ -130,7 +130,7 @@ const Index = () => {
           />
         </Flex>
         <Timeline />
-        {/* <Subscribe /> */}
+        <Subscribe />
       </Stack>
 
       <Modal isOpen={isOpen} onClose={onClose}>

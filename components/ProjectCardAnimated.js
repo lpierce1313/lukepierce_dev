@@ -78,7 +78,7 @@ const ProjectCardAnimated = ({ title, description, href, icon }) => {
             />
             <Stack>
               <Heading
-                as="h4"
+                as="p"
                 size="md"
                 fontWeight="bold"
                 mb={4}

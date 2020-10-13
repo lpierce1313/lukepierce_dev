@@ -78,7 +78,7 @@ const Container = ({ children }) => {
               <Image
                 className="pointer-hand"
                 height="75px"
-                htmlHeight="75px"
+                width="100%"
                 src="/static/images/signature-white.png"
                 title="Luke Pierce Signature"
               />
@@ -86,7 +86,7 @@ const Container = ({ children }) => {
               <Image
                 className="pointer-hand"
                 height="75px"
-                htmlHeight="75px"
+                width="100%"
                 src="/static/images/signature-black.png"
                 title="Luke Pierce Signature"
               />
