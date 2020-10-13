@@ -72,7 +72,8 @@ const Footer = () => {
         dotSmall={4}
         dotLarge={25}
         hoverRadius={60}
-        animationDuration={0.4}
+        animationDuration={0.5}
+        FPS={60}
       />
     </Flex>
   );

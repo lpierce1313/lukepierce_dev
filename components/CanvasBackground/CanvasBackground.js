@@ -1,5 +1,5 @@
 import { Dot } from "./Dot";
-import React from "react";
+import { throttle } from "./helper";
 
 export default class CanvasBackground extends React.Component {
   constructor(props) {
@@ -8,7 +8,6 @@ export default class CanvasBackground extends React.Component {
     this.lastX = null;
     this.lastY = null;
     this.dots = [];
-    this.shouldAnimate = true;
 
     this.state = {
       cw: null,
@@ -21,9 +20,8 @@ export default class CanvasBackground extends React.Component {
     this.addListeners();
     this.addShims();
     this.setSize();
+    this.startRender();
   }
-
-  componentWillUnmount() {}
 
   // Run it every time the props change
   componentDidUpdate() {
@@ -85,14 +83,6 @@ export default class CanvasBackground extends React.Component {
         fillStyleInactive
       );
     }
-
-    // Do not animate if not needed
-    // this is a recursive call which keeps refreshing the app
-    // Resizing the window creates multiple of these recursions
-    // which will make the app behave unexpectedly
-    if (this.shouldAnimate) {
-      window.requestAnimFrame(this.draw);
-    }
   };
 
   renderCanvas = () => {
@@ -108,8 +98,6 @@ export default class CanvasBackground extends React.Component {
         this.addDot(dotSmall, col, row);
       }
     }
-
-    this.draw();
   };
 
   addListeners = () => {
@@ -130,18 +118,6 @@ export default class CanvasBackground extends React.Component {
       },
       false
     );
-
-    document.body.addEventListener("mouseenter", () => {
-      this.shouldAnimate = true;
-      this.draw();
-    });
-
-    document.body.addEventListener("mouseleave", () => {
-      const timeout = this.props.animationDuration * 1000 + 100; // Stop refresh after animation duration + 100ms
-      setTimeout(() => {
-        this.shouldAnimate = false;
-      }, 1000);
-    });
 
     window.addEventListener("resize", this.setSize);
   };
@@ -175,5 +151,12 @@ export default class CanvasBackground extends React.Component {
         }
       );
     })();
+  };
+
+  startRender = () => {
+    const interval = 1000 / this.props.FPS;
+    setInterval(() => {
+      window.requestAnimFrame(this.draw);
+    }, interval);
   };
 }
