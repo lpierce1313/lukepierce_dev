@@ -1,5 +1,4 @@
 import { Dot } from "./Dot";
-import { throttle } from "./helper";
 
 export default class CanvasBackground extends React.Component {
   constructor(props) {

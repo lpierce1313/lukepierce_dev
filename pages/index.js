@@ -61,23 +61,28 @@ const Index = () => {
             <span ref={introRef} />
           </Text>
           <br />
-          <div className="w-1/2">
-            <div className="text-sm">
-              I'm a Colorado based software engineer, full-stack developer and
-              front-end designer and have been working in this field the past 3
-              years. I'm experienced in HTML5, JS, CSS3 and modern libraries in
-              React, NodeJS and Next.js.
-              <br />
-              <br />
-              Currently working full-time as a Software Engineer & front-end dev
-              at Raytheon, a well known defense contractor. You can get my
-              resume{" "}
-              <a onClick={onOpen} className="pointer-hand">
-                here
-              </a>
-              !
-            </div>
-          </div>
+          <>
+            I'm a Colorado based software engineer, full-stack developer and
+            front-end designer and have been working in this field the past 3
+            years. I'm experienced in HTML5, JS, CSS3 and modern libraries in
+            React, NodeJS and Next.js.
+            <br />
+            <br />
+            Currently working full-time as a Software Engineer & front-end dev
+            at Raytheon, a well known defense contractor.
+            <br />
+            <Button
+              as="a"
+              p={[1, 4]}
+              w="250px"
+              fontWeight="bold"
+              m="3rem auto 0"
+              onClick={onOpen}
+              className="pointer-hand"
+            >
+              Grab My Resume
+            </Button>
+          </>
         </div>
         <br />
         <br />
