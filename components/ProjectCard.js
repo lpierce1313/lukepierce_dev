@@ -25,7 +25,7 @@ const divStyle = {
 const trans = (x, y, s) =>
   `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-const ProjectCardAnimated = ({ title, description, href, icon }) => {
+const ProjectCard = ({ title, description, href, icon }) => {
   const { colorMode } = useColorMode();
 
   const borderColor = {
@@ -95,4 +95,4 @@ const ProjectCardAnimated = ({ title, description, href, icon }) => {
   );
 };
 
-export default ProjectCardAnimated;
+export default ProjectCard;

@@ -19,7 +19,7 @@ import { FULL_NAME, INTRO_TYPING } from "../lib/constants";
 
 import BlogPost from "../components/BlogPost";
 import Container from "../components/Container";
-import ProjectCardAnimated from "../components/ProjectCardAnimated";
+import ProjectCard from "../components/ProjectCard";
 import React from "react";
 import Subscribe from "../components/Subscribe";
 import Timeline from "../components/Timeline";
@@ -110,19 +110,19 @@ const Index = () => {
           <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
             Projects
           </Heading>
-          <ProjectCardAnimated
+          <ProjectCard
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
             icon="react2025"
           />
-          <ProjectCardAnimated
+          <ProjectCard
             title="Milehigh Lawncare"
             description="A simple local landscaping application built by me using NodeJS and Bulma and hosted on Netlify/Cloudflare"
             href="https://www.milehighlawncare.com/"
             icon="jamstackfns"
           />
-          <ProjectCardAnimated
+          <ProjectCard
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
             href="https://lpphotography.herokuapp.com/home.html"
