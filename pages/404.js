@@ -1,21 +1,20 @@
-import React from 'react';
-import NextLink from 'next/link';
 import {
-  useColorMode,
-  Heading,
-  Text,
+  Button,
   Flex,
+  Heading,
   Stack,
-  Button
-} from '@chakra-ui/core';
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
 
-import Container from '../components/Container';
+import Container from "@/components/Container";
+import NextLink from "next/link";
 
 const Error = () => {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
-    light: 'gray.700',
-    dark: 'gray.400'
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   return (

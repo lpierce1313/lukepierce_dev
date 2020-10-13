@@ -2,11 +2,11 @@ import { FULL_NAME, HOST_URL } from "../lib/constants";
 import { Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/core";
 import React, { useEffect, useState } from "react";
 
-import Container from "../components/Container";
+import Container from "@/components/Container";
 import { NextSeo } from "next-seo";
 import Skeleton from "react-loading-skeleton";
 import dynamic from "next/dynamic";
-import useMobile from "../components/useMobile";
+import useMobile from "@/components/useMobile";
 
 const url = `${HOST_URL}/about`;
 const title = `About Me – ${FULL_NAME}`;

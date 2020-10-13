@@ -12,8 +12,8 @@ import {
 } from "@chakra-ui/core";
 import React, { useState } from "react";
 
-import BlogPost from "../components/BlogPost";
-import Container from "../components/Container";
+import BlogPost from "@/components/BlogPost";
+import Container from "@/components/Container";
 import { NextSeo } from "next-seo";
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as blogPosts } from "./blog/**/*.mdx";

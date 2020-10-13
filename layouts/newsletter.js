@@ -8,10 +8,9 @@ import {
 } from "@chakra-ui/core";
 import { format, parseISO } from "date-fns";
 
-import BlogSeo from "../components/BlogSeo";
-import Container from "../components/Container";
-import React from "react";
-import Subscribe from "../components/Subscribe";
+import BlogSeo from "@/components/BlogSeo";
+import Container from "@/components/Container";
+import Subscribe from "@/components/Subscribe";
 
 export default (frontMatter) => {
   const slug = frontMatter.__resourcePath

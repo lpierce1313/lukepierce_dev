@@ -8,11 +8,11 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 
-import Container from "../components/Container";
-import NewsletterLink from "../components/NewsletterLink";
+import Container from "@/components/Container";
+import NewsletterLink from "@/components/NewsletterLink";
 import { NextSeo } from "next-seo";
 import React from "react";
-import Subscribe from "../components/Subscribe";
+import Subscribe from "@/components/Subscribe";
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as newsletters } from "./newsletter/**/*.mdx";
 

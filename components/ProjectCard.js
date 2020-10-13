@@ -9,8 +9,6 @@ import {
 } from "@chakra-ui/core";
 import { animated, useSpring } from "react-spring";
 
-import React from "react";
-
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 75,
   (x - window.innerWidth / 2) / 30,

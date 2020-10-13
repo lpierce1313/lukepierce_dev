@@ -7,8 +7,8 @@ import {
 } from "../lib/constants";
 import { Flex, IconButton, Link, useColorMode } from "@chakra-ui/core";
 
-import InteractiveDots from "../components/CanvasBackground/CanvasBackground";
-import useMobile from "../components/useMobile";
+import InteractiveDots from "./CanvasBackground/CanvasBackground";
+import useMobile from "./useMobile";
 
 const Footer = () => {
   const isTouchDevice = useMobile();

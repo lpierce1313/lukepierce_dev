@@ -13,7 +13,7 @@ import React, { useEffect } from "react";
 import { prismDarkTheme, prismLightTheme } from "../styles/prism";
 
 import { DefaultSeo } from "next-seo";
-import MDXComponents from "../components/MDXComponents";
+import MDXComponents from "@/components/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
 import Router from "next/router";
 import SEO from "../next-seo.config";

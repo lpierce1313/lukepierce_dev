@@ -11,11 +11,11 @@ import {
 import { FULL_NAME, HOST_URL } from "../lib/constants";
 import { format, parseISO } from "date-fns";
 
-import BlogSeo from "../components/BlogSeo";
-import Container from "../components/Container";
+import BlogSeo from "@/components/BlogSeo";
+import Container from "@/components/Container";
 import React from "react";
-import Subscribe from "../components/Subscribe";
-import ViewCounter from "../components/ViewCounter";
+import Subscribe from "@/components/Subscribe";
+import ViewCounter from "@/components/ViewCounter";
 
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(

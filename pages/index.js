@@ -17,13 +17,12 @@ import {
 } from "@chakra-ui/core";
 import { FULL_NAME, INTRO_TYPING } from "../lib/constants";
 
-import BlogPost from "../components/BlogPost";
-import Container from "../components/Container";
-import ProjectCard from "../components/ProjectCard";
-import React from "react";
-import Subscribe from "../components/Subscribe";
-import Timeline from "../components/Timeline";
-import useTyped from "../components/useTyped";
+import BlogPost from "@/components/BlogPost";
+import Container from "@/components/Container";
+import ProjectCard from "@/components/ProjectCard";
+import Subscribe from "@/components/Subscribe";
+import Timeline from "@/components/Timeline";
+import useTyped from "@/components/useTyped";
 
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

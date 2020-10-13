@@ -8,12 +8,12 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 
-import Analytics from "../components/metrics/Analytics";
-import Buttondown from "../components/metrics/Buttondown";
-import Container from "../components/Container";
+import Analytics from "@/components/metrics/Analytics";
+import Buttondown from "@/components/metrics/Buttondown";
+import Container from "@/components/Container";
 import { NextSeo } from "next-seo";
 import React from "react";
-import Unsplash from "../components/metrics/Unsplash";
+import Unsplash from "@/components/metrics/Unsplash";
 
 const url = `${HOST_URL}/dashboard`;
 const title = `Dashboard – ${FULL_NAME}`;
