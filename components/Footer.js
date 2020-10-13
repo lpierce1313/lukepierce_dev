@@ -8,8 +8,10 @@ import {
 import { Flex, IconButton, Link, useColorMode } from "@chakra-ui/core";
 
 import InteractiveDots from "../components/CanvasBackground/CanvasBackground";
+import useMobile from "../components/useMobile";
 
 const Footer = () => {
+  const isTouchDevice = useMobile();
   const { colorMode } = useColorMode();
 
   const divStyle = {
@@ -18,7 +20,14 @@ const Footer = () => {
 
   return (
     <Flex align="center" mb={4} direction="column">
-      <div className="social-media-icons-card" style={divStyle}>
+      <div
+        className={
+          isTouchDevice
+            ? "social-media-icons-card-mobile"
+            : "social-media-icons-card-desktop"
+        }
+        style={divStyle}
+      >
         <Link href={TWITTER_URL} title="Twitter" isExternal>
           <IconButton
             aria-label="Twitter"
@@ -65,16 +74,21 @@ const Footer = () => {
           />
         </Link>
       </div>
-      <InteractiveDots
-        fillStyleActive="#AE8422"
-        fillStyleInactive="#f0f2f4"
-        overrideHeight={300}
-        dotSmall={4}
-        dotLarge={25}
-        hoverRadius={60}
-        animationDuration={0.5}
-        FPS={60}
-      />
+
+      {!isTouchDevice && (
+        <InteractiveDots
+          fillStyleActive="#AE8422"
+          fillStyleInactive="#f0f2f4"
+          overrideHeight={300}
+          dotSmall={4}
+          dotLarge={25}
+          hoverRadius={60}
+          animationDuration={0.5}
+          FPS={60}
+        />
+      )}
+      <br />
+      <br />
     </Flex>
   );
 };

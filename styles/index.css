@@ -21,9 +21,17 @@ canvas {
   transform: translateX(-50%);
 }
 
-.social-media-icons-card {
+.social-media-icons-card-desktop {
   position: relative;
   top: 225px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  z-index: 999;
+  border: 2px solid #718096;
+  border-radius: 5px;
+}
+
+.social-media-icons-card-mobile {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
   z-index: 999;
