@@ -1,12 +1,5 @@
 import { FULL_NAME, HOST_URL } from "../../lib/constants";
-import {
-  Flex,
-  Heading,
-  List,
-  Stack,
-  Text,
-  useColorMode,
-} from "@chakra-ui/core";
+import { Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/core";
 
 import Container from "../../components/Container";
 import { NextSeo } from "next-seo";

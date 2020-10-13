@@ -15,7 +15,6 @@ import {
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/core";
-import React, { useEffect } from "react";
 
 import { CONTACT_EMAIL } from "../lib/constants";
 import { CopyToClipboard } from "react-copy-to-clipboard";

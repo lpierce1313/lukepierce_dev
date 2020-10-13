@@ -2,7 +2,7 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 
 import { COUNTRIES, STATES, US_CITIES, WORLD_CITIES } from "../lib/constants";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 import PropTypes from "prop-types";
 import am4geodata_usaAlbersLow from "@amcharts/amcharts4-geodata/usaAlbersLow";

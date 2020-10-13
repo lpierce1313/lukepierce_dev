@@ -1,5 +1,3 @@
-// TODO
-
 import {
   Avatar,
   Flex,

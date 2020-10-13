@@ -54,7 +54,6 @@
     "gsap": "3.5.1",
     "mdx-prism": "0.3.1",
     "next": "9.4.1",
-    "next-google-fonts": "1.1.0",
     "next-mdx-enhanced": "3.0.0",
     "next-seo": "4.5.0",
     "patch-package": "6.2.2",
