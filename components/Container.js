@@ -15,14 +15,12 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Text,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/core";
 import { useEffect, useState } from "react";
 
-import { CONTACT_EMAIL } from "@/lib/constants";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import ContactEmail from "@/components/ContactEmail";
 import Footer from "./Footer";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NextLink from "next/link";
@@ -201,25 +199,11 @@ const Container = ({ children }) => {
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>You can contact me here!</ModalHeader>
+            <ModalHeader>Contact Me</ModalHeader>
             <ModalBody>
-              <Text fontSize="1xl">
-                Email:{" "}
-                <Link
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {CONTACT_EMAIL}
-                </Link>
-              </Text>
+              <ContactEmail />
             </ModalBody>
             <ModalFooter>
-              <CopyToClipboard text={CONTACT_EMAIL}>
-                <Button className="mx-2" mr={3}>
-                  Copy to Clipboard
-                </Button>
-              </CopyToClipboard>
               <Button className="mx-2" mr={3} onClick={onClose}>
                 Close
               </Button>
