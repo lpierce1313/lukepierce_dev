@@ -1,11 +1,18 @@
 import {
+  Box,
+  Flex,
+  IconButton,
+  Link,
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
+import {
   CONTACT_EMAIL,
   GITHUB_URL,
   LINKEDIN_URL,
   TWITTER_URL,
   YOUTUBE_URL,
 } from "../lib/constants";
-import { Flex, IconButton, Link, useColorMode } from "@chakra-ui/core";
 
 import InteractiveDots from "./CanvasBackground/CanvasBackground";
 import useMobile from "./useMobile";
@@ -13,10 +20,17 @@ import useMobile from "./useMobile";
 const Footer = () => {
   const isTouchDevice = useMobile();
   const { colorMode } = useColorMode();
+  const secondaryTextColor = {
+    light: "gray.700",
+    dark: "gray.400",
+  };
 
   const divStyle = {
     backgroundColor: colorMode === "dark" ? "#171923" : "white",
   };
+
+  const d = new Date();
+  const year = d.getFullYear();
 
   return (
     <Flex align="center" mb={4} direction="column">
@@ -74,7 +88,6 @@ const Footer = () => {
           />
         </Link>
       </div>
-
       {!isTouchDevice && (
         <InteractiveDots
           fillStyleActive="#AE8422"
@@ -89,6 +102,17 @@ const Footer = () => {
       )}
       <br />
       <br />
+      <Box
+        bg="transparent"
+        w="100%"
+        pt={8}
+        pb={2}
+        color={secondaryTextColor[colorMode]}
+      >
+        <Text
+          textAlign={"center"}
+        >{`© ${year} Luke Pierce. All rights reserved.`}</Text>
+      </Box>
     </Flex>
   );
 };
