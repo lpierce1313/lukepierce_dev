@@ -8963,7 +8963,7 @@ react-copy-to-clipboard@5.0.2:
     copy-to-clipboard "^3"
     prop-types "^15.5.8"
 
-react-device-detect@1.14.0:
+react-device-detect@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.14.0.tgz#ae8bf8cff85055c030f97aa491a0c2b06c472644"
   integrity sha512-fXFsZoTeLVrONrUr2sqCAXvnbouwyuqlBWoa3K92goCiPM1lUBvZqekv5TY3C02U/IrdoKLOBPFITYluwxKFyw==

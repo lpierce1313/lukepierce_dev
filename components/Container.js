@@ -14,13 +14,24 @@ import {
   Text,
   useColorMode,
   useDisclosure,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuGroup,
+  MenuDivider,
+  MenuOptionGroup,
+  MenuItemOption,
 } from "@chakra-ui/core";
+
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { CONTACT_EMAIL } from "../lib/constants";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Footer from "./Footer";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
+import { useState, useEffect } from "react";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -30,9 +41,31 @@ const StickyNav = styled(Flex)`
   transition: background-color 0.1 ease-in-out;
 `;
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
+
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const size = useWindowSize();
 
   const bgColor = {
     light: "white",
@@ -93,33 +126,69 @@ const Container = ({ children }) => {
             )}
           </NextLink>
         </Box>
-        <Box>
-          <NextLink href="/dashboard" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Dashboard
-            </Button>
-          </NextLink>
-          <NextLink href="/about" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              About
-            </Button>
-          </NextLink>
-          {/* TODO */}
-          <Link title="Email" onClick={onOpen} isExternal>
-            <Button variant="ghost" p={[1, 4]}>
-              Contact
-            </Button>
-          </Link>
-          <IconButton
-            className="mx-2"
-            aria-label="Toggle dark mode"
-            icon={colorMode === "dark" ? "sun" : "moon"}
-            onClick={() => {
-              toggleColorMode();
-              storeColor();
-            }}
-          />
-        </Box>
+        {size.width > 700 ? (
+          <Box>
+            <NextLink href="/dashboard" passHref>
+              <Button as="a" variant="ghost" p={[1, 4]}>
+                Dashboard
+              </Button>
+            </NextLink>
+            <NextLink href="/about" passHref>
+              <Button as="a" variant="ghost" p={[1, 4]}>
+                About
+              </Button>
+            </NextLink>
+            {/* TODO */}
+            <Link title="Email" onClick={onOpen} isExternal>
+              <Button variant="ghost" p={[1, 4]}>
+                Contact
+              </Button>
+            </Link>
+            <IconButton
+              mx={2}
+              aria-label="Toggle dark mode"
+              icon={colorMode === "dark" ? "sun" : "moon"}
+              onClick={() => {
+                toggleColorMode();
+                storeColor();
+              }}
+            />
+          </Box>
+        ) : (
+          <Box>
+            <Menu>
+              <MenuButton as={Button}>
+                <GiHamburgerMenu />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>
+                  <NextLink href="/dashboard" passHref>
+                    Dashboard
+                  </NextLink>
+                </MenuItem>
+                <MenuItem>
+                  <NextLink href="/about" passHref>
+                    About
+                  </NextLink>
+                </MenuItem>
+                <MenuItem>
+                  <NextLink href="/contact" passHref>
+                    Contact
+                  </NextLink>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+            <IconButton
+              mx={2}
+              aria-label="Toggle dark mode"
+              icon={colorMode === "dark" ? "sun" : "moon"}
+              onClick={() => {
+                toggleColorMode();
+                storeColor();
+              }}
+            />
+          </Box>
+        )}
       </StickyNav>
       <Flex
         as="main"

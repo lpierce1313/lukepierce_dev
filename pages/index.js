@@ -141,14 +141,19 @@ const Index = () => {
               You can find my resume in the following formats:
             </Text>
             <br />
-            <Button className="mx-2">
+            <Button mx={1}>
               <a href="luke-pierce-resume.pdf" download>
                 Download PDF
               </a>
             </Button>
+            <Button mx={1}>
+              <a href="luke-pierce-resume.docx" download>
+                Download DOCX
+              </a>
+            </Button>
           </ModalBody>
           <ModalFooter>
-            <Button className="mx-2" mr={3} onClick={onClose}>
+            <Button mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
