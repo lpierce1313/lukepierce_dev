@@ -10,7 +10,7 @@ function ContactEmail() {
     <>
       <Flex mb={2}>
         <Input value={value} isReadOnly placeholder="Email" onClick={onCopy} />
-        <Button onClick={onCopy} ml={2}>
+        <Button onClick={onCopy} ml={2} aria-label="Copy Email to Clipboard">
           {hasCopied ? "Copied" : "Copy"}
         </Button>
         <br />

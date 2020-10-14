@@ -1,16 +1,16 @@
-import React, { useState } from "react";
 import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
   Button,
+  Divider,
+  Flex,
+  Heading,
+  Icon,
   List,
   ListItem,
-  Icon,
   Stack,
-  Divider,
+  Text,
+  useColorMode,
 } from "@chakra-ui/core";
+import React, { useState } from "react";
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -267,6 +267,7 @@ const Timeline = () => {
           fontWeight="medium"
           rightIcon="chevron-down"
           variant="ghost"
+          aria-label="Show full timeline"
           onClick={() => showFullTimeline(true)}
         >
           See More

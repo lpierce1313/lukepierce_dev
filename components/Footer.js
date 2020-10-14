@@ -15,7 +15,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/core";
 import {
-  CONTACT_EMAIL,
   GITHUB_URL,
   LINKEDIN_URL,
   TWITTER_URL,
@@ -134,7 +133,12 @@ const Footer = () => {
             <ContactEmail />
           </ModalBody>
           <ModalFooter>
-            <Button className="mx-2" mr={3} onClick={onClose}>
+            <Button
+              className="mx-2"
+              mr={3}
+              onClick={onClose}
+              aria-label="Close Contact Me Modal"
+            >
               Close
             </Button>
           </ModalFooter>

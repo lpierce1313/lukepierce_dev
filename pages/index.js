@@ -73,6 +73,7 @@ const Index = () => {
               m="3rem auto 0"
               onClick={onOpen}
               className="pointer-hand"
+              aria-label="Grab My Resume"
             >
               Grab My Resume
             </Button>
@@ -136,19 +137,19 @@ const Index = () => {
               You can find my resume in the following formats:
             </Text>
             <br />
-            <Button mx={1}>
+            <Button mx={1} aria-label="Download PDF Resume">
               <a href="luke-pierce-resume.pdf" download>
                 Download PDF
               </a>
             </Button>
-            <Button mx={1}>
+            <Button mx={1} aria-label="Download DOCX Resume">
               <a href="luke-pierce-resume.docx" download>
                 Download DOCX
               </a>
             </Button>
           </ModalBody>
           <ModalFooter>
-            <Button mr={3} onClick={onClose}>
+            <Button mr={3} onClick={onClose} aria-label="Resume Modal Close">
               Close
             </Button>
           </ModalFooter>

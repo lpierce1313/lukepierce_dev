@@ -49,6 +49,7 @@ const Error = () => {
               w="250px"
               fontWeight="bold"
               m="3rem auto 0"
+              aria-label="Return Home"
             >
               Return Home
             </Button>

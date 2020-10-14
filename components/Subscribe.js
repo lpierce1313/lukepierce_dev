@@ -101,6 +101,7 @@ const Subscribe = () => {
             h="1.75rem"
             size="sm"
             onClick={subscribe}
+            aria-label="Subscribe"
           >
             Subscribe
           </Button>

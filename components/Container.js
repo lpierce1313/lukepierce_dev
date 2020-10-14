@@ -126,17 +126,27 @@ const Container = ({ children }) => {
         {size.width > 700 ? (
           <Box>
             <NextLink href="/dashboard" passHref>
-              <Button as="a" variant="ghost" p={[1, 4]}>
+              <Button
+                as="a"
+                variant="ghost"
+                p={[1, 4]}
+                aria-label="Dashboard Nav Link"
+              >
                 Dashboard
               </Button>
             </NextLink>
             <NextLink href="/about" passHref>
-              <Button as="a" variant="ghost" p={[1, 4]}>
+              <Button
+                as="a"
+                variant="ghost"
+                p={[1, 4]}
+                aria-label="About Nav Link"
+              >
                 About
               </Button>
             </NextLink>
             <Link title="Email" onClick={onOpen} isExternal>
-              <Button variant="ghost" p={[1, 4]}>
+              <Button variant="ghost" p={[1, 4]} aria-label="Contact Nav Link">
                 Contact
               </Button>
             </Link>
@@ -204,7 +214,12 @@ const Container = ({ children }) => {
               <ContactEmail />
             </ModalBody>
             <ModalFooter>
-              <Button className="mx-2" mr={3} onClick={onClose}>
+              <Button
+                className="mx-2"
+                mr={3}
+                onClick={onClose}
+                aria-label="Close Contact Me Modal"
+              >
                 Close
               </Button>
             </ModalFooter>
