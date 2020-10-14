@@ -1,4 +1,4 @@
-import { FULL_NAME, HOST_URL } from "../lib/constants";
+import { FULL_NAME, HOST_URL } from "@/lib/constants";
 import {
   Flex,
   Heading,
@@ -11,7 +11,6 @@ import {
 import Container from "@/components/Container";
 import NewsletterLink from "@/components/NewsletterLink";
 import { NextSeo } from "next-seo";
-import React from "react";
 import Subscribe from "@/components/Subscribe";
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as newsletters } from "./newsletter/**/*.mdx";

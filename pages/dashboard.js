@@ -1,4 +1,4 @@
-import { FULL_NAME, HOST_URL } from "../lib/constants";
+import { FULL_NAME, HOST_URL } from "@/lib/constants";
 import {
   Flex,
   Heading,
@@ -12,7 +12,6 @@ import Analytics from "@/components/metrics/Analytics";
 import Buttondown from "@/components/metrics/Buttondown";
 import Container from "@/components/Container";
 import { NextSeo } from "next-seo";
-import React from "react";
 import Unsplash from "@/components/metrics/Unsplash";
 
 const url = `${HOST_URL}/dashboard`;

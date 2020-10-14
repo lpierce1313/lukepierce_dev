@@ -12,7 +12,7 @@ import {
   LINKEDIN_URL,
   TWITTER_URL,
   YOUTUBE_URL,
-} from "../lib/constants";
+} from "@/lib/constants";
 
 import InteractiveDots from "./CanvasBackground/CanvasBackground";
 import useMobile from "./useMobile";

@@ -13,7 +13,6 @@ import { format, parseISO } from "date-fns";
 
 import BlogSeo from "@/components/BlogSeo";
 import Container from "@/components/Container";
-import React from "react";
 import Subscribe from "@/components/Subscribe";
 import ViewCounter from "@/components/ViewCounter";
 

@@ -1,7 +1,7 @@
-import { HOST_URL } from "../../lib/constants";
+import { HOST_URL } from "@/lib/constants";
 import MetricCard from "./Card";
 import React from "react";
-import fetcher from "../../lib/fetcher";
+import fetcher from "@/lib/fetcher";
 import format from "comma-number";
 import useSWR from "swr";
 

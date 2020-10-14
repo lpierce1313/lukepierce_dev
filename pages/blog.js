@@ -1,4 +1,4 @@
-import { FULL_NAME, HOST_URL } from "../lib/constants";
+import { FULL_NAME, HOST_URL } from "@/lib/constants";
 import {
   Flex,
   Heading,

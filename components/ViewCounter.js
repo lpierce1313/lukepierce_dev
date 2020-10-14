@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import format from 'comma-number';
+import { useEffect, useState } from "react";
 
-import loadDb from '../lib/db';
+import format from "comma-number";
+import loadDb from "@/lib/db";
 
 const ViewCounter = ({ id }) => {
-  const [views, setViews] = useState('');
+  const [views, setViews] = useState("");
 
   useEffect(() => {
     const onViews = (newViews) => setViews(newViews.val());
@@ -12,14 +12,14 @@ const ViewCounter = ({ id }) => {
 
     const fetchData = async () => {
       db = await loadDb();
-      db.child(id).on('value', onViews);
+      db.child(id).on("value", onViews);
     };
 
     fetchData();
 
     return () => {
       if (db) {
-        db.child(id).off('value', onViews);
+        db.child(id).off("value", onViews);
       }
     };
   }, [id]);
@@ -31,7 +31,7 @@ const ViewCounter = ({ id }) => {
     registerView();
   }, [id]);
 
-  return `${views ? format(views) : '–––'} views`;
+  return `${views ? format(views) : "–––"} views`;
 };
 
 export default ViewCounter;

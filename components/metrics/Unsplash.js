@@ -1,8 +1,7 @@
 import MetricCard from "./Card";
-import React from "react";
 import { SimpleGrid } from "@chakra-ui/core";
-import { UNSPLASH_USER } from "../../lib/constants";
-import fetcher from "../../lib/fetcher";
+import { UNSPLASH_USER } from "@/lib/constants";
+import fetcher from "@/lib/fetcher";
 import format from "comma-number";
 import useSWR from "swr";
 

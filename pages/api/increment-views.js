@@ -1,13 +1,13 @@
-import db from '../../lib/db-admin';
+import db from "@/lib/db-admin";
 
 const incrementViews = async (req, res) => {
   if (!req.query.id) {
     return res.status(400).json({
-      error: 'Missing "id" query parameter'
+      error: 'Missing "id" query parameter',
     });
   }
 
-  const ref = db.ref('views').child(req.query.id);
+  const ref = db.ref("views").child(req.query.id);
   const { snapshot } = await ref.transaction((currentViews) => {
     if (currentViews === null) {
       return 1;
@@ -17,7 +17,7 @@ const incrementViews = async (req, res) => {
   });
 
   return res.status(200).json({
-    total: snapshot.val()
+    total: snapshot.val(),
   });
 };
 

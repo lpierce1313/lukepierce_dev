@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/core";
 import React, { useRef, useState } from "react";
 
-import { FATHOM_SUBSCRIBE_GOAL } from "../lib/constants";
+import { FATHOM_SUBSCRIBE_GOAL } from "@/lib/constants";
 import { trackGoal } from "fathom-client";
 
 const Subscribe = () => {

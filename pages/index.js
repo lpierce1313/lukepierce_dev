@@ -5,7 +5,6 @@ import {
   Heading,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
   ModalFooter,
   ModalHeader,
@@ -17,7 +16,7 @@ import {
 } from "@chakra-ui/core";
 import { FULL_NAME, INTRO_TYPING } from "../lib/constants";
 
-import BlogPost from "@/components/BlogPost";
+// import BlogPost from "@/components/BlogPost";
 import Container from "@/components/Container";
 import ProjectCard from "@/components/ProjectCard";
 import Subscribe from "@/components/Subscribe";
@@ -27,10 +26,6 @@ import useTyped from "@/components/useTyped";
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
-  const secondaryTextColor = {
-    light: "gray.700",
-    dark: "gray.400",
-  };
   const borderColor = {
     light: "gray.400",
     dark: "gray.600",

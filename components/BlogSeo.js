@@ -1,7 +1,5 @@
 import { ArticleJsonLd, NextSeo } from "next-seo";
-import { FULL_NAME, HOST_URL } from "../lib/constants";
-
-import React from "react";
+import { FULL_NAME, HOST_URL } from "@/lib/constants";
 
 const BlogSeo = ({ title, summary, publishedAt, url, image }) => {
   const date = new Date(publishedAt).toISOString();

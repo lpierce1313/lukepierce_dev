@@ -5,6 +5,10 @@ import {
   IconButton,
   Image,
   Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Modal,
   ModalBody,
   ModalContent,
@@ -14,24 +18,15 @@ import {
   Text,
   useColorMode,
   useDisclosure,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuGroup,
-  MenuDivider,
-  MenuOptionGroup,
-  MenuItemOption,
 } from "@chakra-ui/core";
+import { useEffect, useState } from "react";
 
-import { GiHamburgerMenu } from "react-icons/gi";
-
-import { CONTACT_EMAIL } from "../lib/constants";
+import { CONTACT_EMAIL } from "@/lib/constants";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Footer from "./Footer";
+import { GiHamburgerMenu } from "react-icons/gi";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
-import { useState, useEffect } from "react";
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -138,7 +133,6 @@ const Container = ({ children }) => {
                 About
               </Button>
             </NextLink>
-            {/* TODO */}
             <Link title="Email" onClick={onOpen} isExternal>
               <Button variant="ghost" p={[1, 4]}>
                 Contact
