@@ -103,21 +103,25 @@ const Container = ({ children }) => {
         <Box>
           <NextLink href="/" passHref>
             {colorMode === "dark" ? (
-              <Image
-                className="pointer-hand"
-                height="75px"
-                width="100%"
-                src="/static/images/signature-white.png"
-                title="Luke Pierce Signature"
-              />
+              <a>
+                <Image
+                  className="pointer-hand"
+                  height="60px"
+                  width="100%"
+                  src="/static/images/signature-white.png"
+                  title="Luke Pierce Signature"
+                />
+              </a>
             ) : (
-              <Image
-                className="pointer-hand"
-                height="75px"
-                width="100%"
-                src="/static/images/signature-black.png"
-                title="Luke Pierce Signature"
-              />
+              <a>
+                <Image
+                  className="pointer-hand"
+                  height="60px"
+                  width="100%"
+                  src="/static/images/signature-black.png"
+                  title="Luke Pierce Signature"
+                />
+              </a>
             )}
           </NextLink>
         </Box>
