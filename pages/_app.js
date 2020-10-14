@@ -1,4 +1,4 @@
-import "../styles/index.css";
+import "@/styles/index.css";
 
 import * as Fathom from "fathom-client";
 
@@ -10,14 +10,14 @@ import {
 } from "@chakra-ui/core";
 import { Global, css } from "@emotion/core";
 import React, { useEffect } from "react";
-import { prismDarkTheme, prismLightTheme } from "../styles/prism";
+import { prismDarkTheme, prismLightTheme } from "@/styles/prism";
 
 import { DefaultSeo } from "next-seo";
 import MDXComponents from "@/components/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
 import Router from "next/router";
 import SEO from "../next-seo.config";
-import theme from "../styles/theme";
+import theme from "@/styles/theme";
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
