@@ -131,7 +131,7 @@ const Index = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Glad you're wanting to learn more!</ModalHeader>
+          <ModalHeader>Glad you want to learn more!</ModalHeader>
           <ModalBody>
             <Text fontSize="1xl">
               You can find my resume in the following formats:
