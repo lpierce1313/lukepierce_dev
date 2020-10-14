@@ -1,7 +1,6 @@
 import {
   Flex,
   Heading,
-  Icon,
   Link,
   Stack,
   Text,
@@ -23,17 +22,22 @@ const divStyle = {
 const trans = (x, y, s) =>
   `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-const ProjectCard = ({ title, description, href, icon }) => {
+const trackGoal = (title) => {
+  const goalCodes = {
+    SpeedyNote: "RV7BXBOK",
+    "Milehigh Lawncare": "EFNZBA9U",
+    "LP Photography": "MDYDWSYT",
+  };
+
+  Fathom.trackGoal(goalCodes[title], 0);
+};
+
+const ProjectCard = ({ title, description, href }) => {
   const { colorMode } = useColorMode();
 
   const borderColor = {
     light: "gray.200",
     dark: "gray.600",
-  };
-
-  const iconColor = {
-    light: "gray.1000",
-    dark: "white",
   };
 
   const [props, set] = useSpring(() => ({
@@ -51,7 +55,7 @@ const ProjectCard = ({ title, description, href, icon }) => {
         <Link
           mb={4}
           href={href}
-          // onClick={() => trackGoal(title)}
+          onClick={() => trackGoal(title)}
           title={title}
           isExternal
           _hover={{
@@ -66,14 +70,6 @@ const ProjectCard = ({ title, description, href, icon }) => {
             borderRadius={4}
             p={4}
           >
-            <Icon
-              aria-label="LinkedIn"
-              name={icon}
-              color={iconColor[colorMode]}
-              size="32px"
-              ml={2}
-              mr={4}
-            />
             <Stack>
               <Heading
                 as="p"
