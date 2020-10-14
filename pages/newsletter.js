@@ -58,12 +58,7 @@ const Newsletter = () => {
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               Newsletter
             </Heading>
-            <Text color={secondaryTextColor[colorMode]}>
-              My newsletter provides a behind-the-scenes look into what I'm
-              working on and writing about. I frequently share some of my
-              favorite articles I've read, as well as anything fascinating about
-              technology.
-            </Text>
+            <Text color={secondaryTextColor[colorMode]}>Example</Text>
           </Flex>
           <Subscribe />
           <Flex

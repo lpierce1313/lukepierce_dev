@@ -76,9 +76,7 @@ const Blog = () => {
               Blog
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>
-              {`I've been writing online since 2014, mostly about web development and tech careers.
-                In total, I've written ${blogPosts.length} articles on this site.
-                Use the search below to filter by title.`}
+              {`I've written ${blogPosts.length}.`}
             </Text>
             <InputGroup my={4} mr={4} w="100%">
               <Input
