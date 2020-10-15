@@ -74,7 +74,7 @@ const Index = () => {
               onClick={onOpen}
               className="pointer-hand"
               aria-label="Grab My Resume"
-              variantColor="teal"
+              variantColor="blue"
               variant="outline"
             >
               Grab My Resume
