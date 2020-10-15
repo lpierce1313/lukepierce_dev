@@ -80,8 +80,8 @@ const Subscribe = () => {
       my={4}
       w="100%"
     >
-      <Heading as="h5" size="lg" mb={2}>
-        Subscribe to the newsletter
+      <Heading as="p" size="lg" mb={2}>
+        Subscribe to the Newsletter
       </Heading>
       <Text>
         Get emails from me about web development, tech, and early access to new
@@ -89,7 +89,7 @@ const Subscribe = () => {
       </Text>
       <InputGroup size="md" mt={4}>
         <Input
-          aria-label="Email for newsletter"
+          aria-label="Email"
           placeholder="you@hey.com"
           ref={inputEl}
           type="email"

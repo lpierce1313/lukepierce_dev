@@ -22,7 +22,6 @@ import { useEffect, useState } from "react";
 
 import ContactEmail from "@/components/ContactEmail";
 import Footer from "./Footer";
-import { GiHamburgerMenu } from "react-icons/gi";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 
@@ -105,7 +104,6 @@ const Container = ({ children }) => {
                 <Image
                   className="pointer-hand"
                   height="60px"
-                  width="100%"
                   src="/static/images/signature-white.png"
                   title="Luke Pierce Signature"
                 />
@@ -115,7 +113,6 @@ const Container = ({ children }) => {
                 <Image
                   className="pointer-hand"
                   height="60px"
-                  width="100%"
                   src="/static/images/signature-black.png"
                   title="Luke Pierce Signature"
                 />
@@ -163,8 +160,12 @@ const Container = ({ children }) => {
         ) : (
           <Box>
             <Menu>
-              <MenuButton as={Button}>
-                <GiHamburgerMenu />
+              <MenuButton as={Button} aria-label="Mobile Nav Hamburger">
+                <svg viewBox="0 0 100 80" width="15" height="30">
+                  <rect width="100" height="20"></rect>
+                  <rect y="30" width="100" height="20"></rect>
+                  <rect y="60" width="100" height="20"></rect>
+                </svg>
               </MenuButton>
               <MenuList>
                 <MenuItem>
