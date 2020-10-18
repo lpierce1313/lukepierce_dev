@@ -7,6 +7,7 @@ import {
   Divider,
   Flex,
   Heading,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
@@ -22,6 +23,7 @@ import { FULL_NAME, INTRO_TYPING } from "../lib/constants";
 
 // import BlogPost from "@/components/BlogPost";
 import Container from "@/components/Container";
+import NextLink from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import Subscribe from "@/components/Subscribe";
 import Timeline from "@/components/Timeline";
@@ -72,7 +74,13 @@ const Index = () => {
             <br />
             <br />
             Currently working full-time as a Software Engineer & front-end dev
-            at Raytheon, a well known defense contractor.
+            at Raytheon, a well known defense contractor. You can learn more
+            about me{" "}
+            <NextLink href="/about" passHref>
+              <Link color={secondaryTextColor[colorMode]}>
+                <Text as="u">here</Text>
+              </Link>
+            </NextLink>
             <br />
           </Text>
           <Button
@@ -118,22 +126,24 @@ const Index = () => {
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
+            color="#7b45c7"
           />
           <ProjectCard
             title="Milehigh Lawncare"
             description="A simple local landscaping application built by me using NodeJS and Bulma and hosted on Netlify/Cloudflare"
             href="https://www.milehighlawncare.com/"
+            color="#16d0b1"
           />
           <ProjectCard
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
             href="https://lpphotography.herokuapp.com/home.html"
+            color="#394490"
           />
         </Flex>
         <Timeline />
         <Subscribe />
       </Stack>
-
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

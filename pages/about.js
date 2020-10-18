@@ -18,6 +18,7 @@ import { FULL_NAME, HOST_URL } from "../lib/constants";
 import React, { useEffect, useState } from "react";
 
 import Container from "@/components/Container";
+import NextLink from "next/link";
 import { NextSeo } from "next-seo";
 import Skeleton from "react-loading-skeleton";
 import dynamic from "next/dynamic";
@@ -79,7 +80,7 @@ const About = () => {
             alignItems="flex-start"
             maxWidth="700px"
           >
-            <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+            <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
               About Me
             </Heading>
             <Image
@@ -89,53 +90,42 @@ const About = () => {
               alt="Peru 2019"
             />
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              My name is Luke Pierce and I am born and raised in Lakewood, CO. I
-              graduated from Colorado School of Mines with an Electrical
-              Engineering degree at the top of my class. I decided after I
-              completed my degree that I did not have a passion for Electrical
-              Engineering even though I understood it very well. Web development
-              is my passion, I taught myself <Text as="b">HTML5</Text>,{" "}
-              <Text as="b">CSS</Text>, <Text as="b">JavaScript</Text>,{" "}
-              <Text as="b">Ruby on Rails</Text>, <Text as="b">React</Text>,{" "}
-              <Text as="b">NextJS</Text>, <Text as="b">Python</Text>, and{" "}
-              <Text as="b">NodeJS</Text>. My favorite language being NextJS
-              which is one this portfolio is made from. I hope someday that I
-              can live in a apartment/town home in downtown Denver, have amazing
-              city views, and work for a small startup as a front-end web
-              developer.
-            </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Aside from programming, I am very passionate about fitness and
-              adventuring outdoors. Everyday, I go to the gym and do strength
-              training and cardio. I play sports leagues twice a week, such as,
-              Spikeball, Volleyball, Basketball, Football, and Tennis. I love
-              the mountains in Colorado, so I usually try to hike 1-2 times per
-              week. Overall, I live a well balanced life as I am able to work a
-              job that I am passionate about and am able to exercise and be
-              outdoors all of the time.
-            </Text>
-            <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Someday, I would like to travel to at least 50 different
-              countries, learn multiple languages, and visit every state in the
-              United States. Below, are places that I have travelled to so far,
-              but there will be many more to come.
+            <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
+              As of May 2019, I have worked as a Software Engineer with Raytheon
+              in Aurora, CO
+              <br />
+              <br />I was born and raised in beautiful Denver, CO. I grew up
+              camping, hiking, and enjoying the great outdoors. At a very young
+              age, I started to build computers, learning to code, and fell in
+              love with all things tech. I have a maltese yorkie named George,
+              who my family all calls "Tuna" after Jim from The Office. I am
+              avid traveler, hiker, and fitness enthusiast. I hope to be able to
+              retire at a young age, so I can pursue my passion of traveling.
+              Okay, let's talk tech! I love to work with{" "}
+              <Text as="b">ReactJS</Text>, <Text as="b">Next.JS</Text>,{" "}
+              <Text as="b">Javascript</Text>, <Text as="b">Java</Text>, and{" "}
+              <Text as="b">Node.JS</Text>.
+              <br />
+              <br />
+              Curious about my coding setup?{" "}
+              <NextLink href="/setup" passHref>
+                <Link color={secondaryTextColor[colorMode]}>
+                  <Text as="u">Check it out here!</Text>
+                </Link>
+              </NextLink>
             </Text>
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               Get In Touch
             </Heading>
             <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
               <List as="ol" styleType="decimal">
-                <ListItem>IndieHackers - @lpierce1313</ListItem>
-                <ListItem>Hacker News - @lpierce1313</ListItem>
-                <ListItem>GitHub - @lpierce1313</ListItem>
                 <ListItem>
                   <Link
                     href="https://www.indiehackers.com/matchmike1313"
                     title="IndieHackers"
                     isExternal
                   >
-                    <a>IndieHackers - @matchmike1313</a>
+                    <a>IndieHackers - @lpierce1313</a>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -144,7 +134,7 @@ const About = () => {
                     title="HackerNews"
                     isExternal
                   >
-                    <a>Hacker News - @matchmike1313</a>
+                    <a>Hacker News - @lpierce1313</a>
                   </Link>
                 </ListItem>
                 <ListItem>Email - Contact Link Above</ListItem>
