@@ -1,5 +1,8 @@
-import Unsplash, { toJson } from "unsplash-js";
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
 
+import Unsplash, { toJson } from "unsplash-js";
 import { UNSPLASH_USER } from "@/lib/constants";
 
 let unsplash;

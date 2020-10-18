@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import { Link, ListItem, useColorMode } from "@chakra-ui/core";
 import { format, parseISO } from "date-fns";
 

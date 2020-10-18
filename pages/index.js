@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import {
   Button,
   Divider,
@@ -26,9 +30,15 @@ import useTyped from "@/components/useTyped";
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
+
   const borderColor = {
     light: "gray.400",
     dark: "gray.600",
+  };
+
+  const secondaryTextColor = {
+    light: "gray.700",
+    dark: "gray.400",
   };
 
   const introRef = React.useRef(null);
@@ -46,16 +56,15 @@ const Index = () => {
         spacing={3}
         justifyContent="center"
         alignItems="flex-start"
-        m="0 auto 4rem auto"
+        m="0 auto 6rem auto"
         maxWidth="700px"
       >
-        <Text fontSize="6xl">Hi I’m {FULL_NAME}</Text>
-        <div>
-          <Text fontSize="3xl">
+        <Text fontSize="6xl">Hi, I’m {FULL_NAME}</Text>
+        <>
+          <Text fontSize="3xl" mb={4}>
             <span ref={introRef} />
           </Text>
-          <br />
-          <>
+          <Text color={secondaryTextColor[colorMode]} fontSize="2xl">
             I'm a Colorado based software engineer, full-stack developer and
             front-end designer and have been working in this field the past 3
             years. I'm experienced in HTML5, JS, CSS3 and modern libraries in
@@ -65,23 +74,22 @@ const Index = () => {
             Currently working full-time as a Software Engineer & front-end dev
             at Raytheon, a well known defense contractor.
             <br />
-            <Button
-              as="a"
-              p={[1, 4]}
-              w="250px"
-              fontWeight="bold"
-              m="3rem auto 0"
-              onClick={onOpen}
-              className="pointer-hand"
-              aria-label="Grab My Resume"
-              variantColor="teal"
-            >
-              Grab My Resume
-            </Button>
-          </>
-        </div>
-        <br />
-        <br />
+          </Text>
+          <Button
+            as="a"
+            p={[1, 4]}
+            w="250px"
+            fontWeight="bold"
+            m="3rem auto 0"
+            onClick={onOpen}
+            className="pointer-hand"
+            aria-label="Grab My Resume"
+            variantColor="teal"
+            mb={4}
+          >
+            Grab My Resume
+          </Button>
+        </>
         <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />;
         {/* <Flex
           flexDirection="column"
@@ -104,25 +112,22 @@ const Index = () => {
           maxWidth="700px"
         >
           <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
-            Projects
+            Recent Projects
           </Heading>
           <ProjectCard
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
-            icon="react2025"
           />
           <ProjectCard
             title="Milehigh Lawncare"
             description="A simple local landscaping application built by me using NodeJS and Bulma and hosted on Netlify/Cloudflare"
             href="https://www.milehighlawncare.com/"
-            icon="jamstackfns"
           />
           <ProjectCard
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
             href="https://lpphotography.herokuapp.com/home.html"
-            icon="nextjs"
           />
         </Flex>
         <Timeline />
@@ -140,12 +145,12 @@ const Index = () => {
             <br />
             <Button mx={1} aria-label="Download PDF Resume">
               <a href="luke-pierce-resume.pdf" download>
-                Download PDF
+                PDF
               </a>
             </Button>
             <Button mx={1} aria-label="Download DOCX Resume">
               <a href="luke-pierce-resume.docx" download>
-                Download DOCX
+                DOCX
               </a>
             </Button>
           </ModalBody>

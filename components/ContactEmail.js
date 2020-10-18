@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import { Button, Flex, Input, Link, Text, useClipboard } from "@chakra-ui/core";
 
 import { CONTACT_EMAIL } from "@/lib/constants";

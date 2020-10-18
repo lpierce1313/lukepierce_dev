@@ -10,7 +10,7 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lpierce1313/lukepierce_dev.git"
+    "url": "git@github.com/lpierce1313/lukepierce_dev.git"
   },
   "scripts": {
     "build": "next build",

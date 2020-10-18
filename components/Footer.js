@@ -15,6 +15,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/core";
 import {
+  FULL_NAME,
   GITHUB_URL,
   LINKEDIN_URL,
   TWITTER_URL,
@@ -122,7 +123,7 @@ const Footer = () => {
         >
           <Text
             textAlign={"center"}
-          >{`© ${year} Luke Pierce. All rights reserved.`}</Text>
+          >{`© ${year} ${FULL_NAME}. All rights reserved.`}</Text>
         </Box>
       </Flex>
       <Modal isOpen={isOpen} onClose={onClose}>

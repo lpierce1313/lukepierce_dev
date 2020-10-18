@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import Document, { Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -9,21 +13,24 @@ class MyDocument extends Document {
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <meta content="#ffffff" name="theme-color" />
           <meta content="#ffffff" name="msapplication-TileColor" />
-          <meta
-            content="/static/favicons/browserconfig.xml"
-            name="msapplication-config"
-          />
-          {/*
-          <meta
-            content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
-            name="google-site-verification"
-          /> */}
           <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
-          <link href="/static/favicons/site.webmanifest" rel="manifest" />
+          <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link
             rel="preconnect"
             href="https://cdn.usefathom.com"
             crossOrigin=""
+          />
+          <link
+            href="/static/favicons/android-chrome-512x512.png"
+            rel="icon"
+            sizes="512x512"
+            type="image/png"
+          />
+          <link
+            href="/static/favicons/android-chrome-192x192.png"
+            rel="icon"
+            sizes="192x192"
+            type="image/png"
           />
           <link
             href="/static/favicons/apple-touch-icon.png"
@@ -43,9 +50,9 @@ class MyDocument extends Document {
             type="image/png"
           />
           <link
-            color="#4a9885"
-            href="/static/favicons/safari-pinned-tab.svg"
             rel="mask-icon"
+            href="/static/favicons/safari-pinned-tab.svg"
+            color="#5bbad5"
           />
         </Head>
         <body>

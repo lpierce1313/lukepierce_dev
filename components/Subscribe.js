@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import {
   Box,
   Button,
@@ -81,11 +85,11 @@ const Subscribe = () => {
       w="100%"
     >
       <Heading as="p" size="lg" mb={2}>
-        Subscribe to the Newsletter
+        Subscribe to my Newsletter
       </Heading>
       <Text>
-        Get emails from me about web development, tech, and early access to new
-        articles.
+        Get emails from me about web development, tech, life, and early access
+        to new articles.
       </Text>
       <InputGroup size="md" mt={4}>
         <Input

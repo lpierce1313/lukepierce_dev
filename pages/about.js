@@ -1,5 +1,20 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
+import {
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Stack,
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
 import { FULL_NAME, HOST_URL } from "../lib/constants";
-import { Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/core";
 import React, { useEffect, useState } from "react";
 
 import Container from "@/components/Container";
@@ -23,6 +38,11 @@ const About = () => {
   const secondaryTextColor = {
     light: "gray.700",
     dark: "gray.400",
+  };
+
+  const borderColor = {
+    light: "gray.200",
+    dark: "gray.600",
   };
 
   const [loading, setLoading] = useState(false);
@@ -62,6 +82,13 @@ const About = () => {
             <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
               About Me
             </Heading>
+            <Image
+              className="pointer-hand"
+              src="/static/images/peru.png"
+              title="Peru 2019"
+              alt="Peru 2019"
+            />
+            <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               My name is Luke Pierce and I am born and raised in Lakewood, CO. I
               graduated from Colorado School of Mines with an Electrical
@@ -93,6 +120,35 @@ const About = () => {
               countries, learn multiple languages, and visit every state in the
               United States. Below, are places that I have travelled to so far,
               but there will be many more to come.
+            </Text>
+            <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+              Get In Touch
+            </Heading>
+            <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
+              <List as="ol" styleType="decimal">
+                <ListItem>IndieHackers - @lpierce1313</ListItem>
+                <ListItem>Hacker News - @lpierce1313</ListItem>
+                <ListItem>GitHub - @lpierce1313</ListItem>
+                <ListItem>
+                  <Link
+                    href="https://www.indiehackers.com/matchmike1313"
+                    title="IndieHackers"
+                    isExternal
+                  >
+                    <a>IndieHackers - @matchmike1313</a>
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    href="https://news.ycombinator.com/user?id=matchmike1313"
+                    title="HackerNews"
+                    isExternal
+                  >
+                    <a>Hacker News - @matchmike1313</a>
+                  </Link>
+                </ListItem>
+                <ListItem>Email - Contact Link Above</ListItem>
+              </List>
             </Text>
             <Heading letterSpacing="tight" mb={2} as="h2" size="2xl">
               My US Travels

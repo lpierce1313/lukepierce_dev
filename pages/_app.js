@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import "@/styles/index.css";
 
 import * as Fathom from "fathom-client";

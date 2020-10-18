@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import db from "@/lib/db-admin";
 
 const incrementViews = async (req, res) => {

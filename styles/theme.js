@@ -1,3 +1,7 @@
+// =============================================================================
+// Copyright © 2020 Luke Pierce. All rights reserved.
+// =============================================================================
+
 import React from "react";
 import { theme as chakraTheme } from "@chakra-ui/core";
 
