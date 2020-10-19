@@ -81,35 +81,27 @@ const Setup = () => {
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Image
               className="pointer-hand"
-              src="/static/images/setup-two.jpg"
-              title="Setup Angle Two"
-              alt="Setup Angle Two"
+              src="/static/images/pc-setup.jpg"
+              title="Gaming PC"
+              alt="Gaming PC"
             />
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               <List as="ol" styleType="decimal">
                 <ListItem mb={6}>
-                  <Link
-                    href="https://www.dyson.com/lighting/task-lighting/dyson-lightcycle-morph/dyson-lightcycle-morph-overview"
-                    title="Dyson"
-                    isExternal
-                  >
-                    <a>
-                      <Text as="u">Dyson lightcycle Morph Light</Text>
-                    </a>
-                  </Link>{" "}
-                  - This is a fantastic light. From the color temperature
-                  adjustments to the sunrise-to-sunset settings every aspect of
-                  this lamp is well thoughtout.
+                  Custom Built PC Specifications: Nvidia Geforce GTX 1060 3GB,
+                  Samsung Evo 256gb m.2 SSD, Western Digital Black 2tb HDD x2,
+                  Intel I5-9600K CPU 3.7 GHz Six Core, 16GB 2666 MHz Vengeance
+                  Ram, NZXT White Tempered Glass Computer Case
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://www.amazon.com/gp/product/B07XV9NQSJ/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1"
+                    href="https://www.amazon.com/Samsung-2443BWT-1-24-Inch-Monitor-Black/dp/B0030CJBZU"
                     title="Amazon"
                     isExternal
                   >
                     <a>
-                      <Text as="u">LG 27 Inch UltraFine 5K Display</Text>
+                      <Text as="u">Acer 28inch 4k Monitor</Text>
                     </a>
                   </Link>{" "}
                   - Great monitor for Macbook Pro users with USB-C looking for
@@ -121,114 +113,79 @@ const Setup = () => {
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://www.apple.com/shop/buy-mac/macbook-pro/16-inch-space-gray-2.6ghz-6-core-processor-512gb"
-                    title="Apple"
-                    isExternal
-                  >
-                    <a>
-                      <Text as="u">Apple 16 Inch Macbook Pro</Text>
-                    </a>
-                  </Link>{" "}
-                  - Could not be happier with my 16 inch Spacegray Macbook Pro.
-                  16GB of ram gives me a ton of flexability with running Docker
-                  containers and intensive dev work, while the 1TB SSD is perect
-                  for all my data.
-                </ListItem>
-                <ListItem mb={6}>
-                  <Link
-                    href="https://www.amazon.com/gp/product/B01F01DRW6/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1"
+                    href="https://www.amazon.com/Acer-CB281HK-Abmiiprx-FREESYNC-Technology/dp/B07JR9FVGK"
                     title="Amazon"
                     isExternal
                   >
                     <a>
-                      <Text as="u">mStand by Rain Design</Text>
+                      <Text as="u">Samsung SyncMaster 24 inch Monitor</Text>
                     </a>
                   </Link>{" "}
-                  Simple but high functioning laptop stand in Spacegray to match
-                  my Mac. Has a nice cable hole at the bottom for my single
-                  USB-C connection to my monitor setup.
+                  - Great for a secondary monitor. It is reliable, high
+                  resolution, and has great colors. Highly recommend.
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://grovemade.com/product/wool-felt-desk-pad/?initial=475"
-                    title="Grovemade"
-                    isExternal
-                  >
-                    <a>
-                      <Text as="u">Small Dark Gray Wool Deskpad</Text>
-                    </a>
-                  </Link>{" "}
-                  Lovely deskpad that's handmade from Grovemade. Great company
-                  out of Portland, OR. They offer several sizes and colors so be
-                  sure to check out the store.
-                </ListItem>
-                <ListItem mb={6}>
-                  <Link
-                    href="https://www.amazon.com/gp/product/B07MP1PV5B/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1"
+                    href="https://www.amazon.com/Apple-quad-core-Discontinued-Manufacturer-Refurbished/dp/B07CHY6T2M"
                     title="Amazon"
                     isExternal
                   >
                     <a>
-                      <Text as="u">
-                        Code V3 87-Key Illuminated Mechanical Keyboard
-                      </Text>
+                      <Text as="u">Apple 15 Inch Macbook Pro</Text>
+                    </a>
+                  </Link>{" "}
+                  - Could not be happier with my 15 inch Spacegray Macbook Pro.
+                  16GB of ram gives me a ton of flexibility with intensive dev
+                  work, while the 512gb SSD is perfect for all my data.
+                </ListItem>
+                <ListItem mb={6}>
+                  <Link
+                    href="https://www.coolermaster.com/catalog/peripheral/keyboards/masterset-ms120/"
+                    title="Cooler Master"
+                    isExternal
+                  >
+                    <a>
+                      <Text as="u">Corsair Masterset MS120 Mouse</Text>
                     </a>
                   </Link>{" "}
                   Coding is all about productivity, and part of that includes
                   the quality of your display, keyboard, and mouse. I'm loving
-                  my CODE keyboard. I got the Cherry MX Clear keys, they offer a
-                  good balance of feedback when I type, and I am not bothered by
-                  the noise.
+                  my Corsair keyboard. I got the Cherry MX Clear keys, they
+                  offer a good balance of feedback when I type, and I am not
+                  bothered by the noise.
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://www.amazon.com/gp/product/B07MP1PV5B/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1"
-                    title="Amazon"
+                    href="https://www.coolermaster.com/catalog/peripheral/keyboards/masterset-ms120/"
+                    title="Cooler Master"
                     isExternal
                   >
                     <a>
-                      <Text as="u">Logitech MX Master 3 Mouse</Text>
+                      <Text as="u">Corsair Masterset MS120 Mouse</Text>
                     </a>
                   </Link>{" "}
                   Great mouse for multi-machine users. Using the memory setting
                   I can switch bluetooth connections in a fraction of a second.
                   I simple swap my personal Macbook Pro for my work Macbook Pro
                   and switch profiles on the mouse and boom, I'm ready to go.
-                  Also, the battery on the MX Mouse lasts for two months!
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://nomadgoods.com/collections/cables-lightning/products/usb-c-lightning-kevlar-cable"
-                    title="Nomad Goods"
+                    href="https://www.staples.com/Staples-Corvair-Luxura-Mesh-Back-Task-Chair-Black/product_934100"
+                    title="Staples Corvair Mesh Back Desk Chair"
                     isExternal
                   >
                     <a>
-                      <Text as="u">Kelvar Lightning Cable USB-C</Text>
+                      <Text as="u">Staples Corvair Mesh Back Desk Chair</Text>
                     </a>
                   </Link>{" "}
-                  Having been super frustrated with low-quality USB-C/USB-A to
-                  Lightning cables I found Nomad Goods's braided / kelvar cable.
-                  Including metal connectors and a 5-year warranty.
+                  This chair is absolutely amazing. It is very comfortable, and
+                  I have no discomfort when I work for several hours each day. I
+                  highly recommend it.
                 </ListItem>
                 <ListItem mb={6}>
                   <Link
-                    href="https://www.lauradavidsondirect.com/products/soho-premier-ribbed-management-chair"
-                    title="Laura Davidson Direct"
-                    isExternal
-                  >
-                    <a>
-                      <Text as="u">
-                        Laura SOHO Premier Ribbed Management Chair
-                      </Text>
-                    </a>
-                  </Link>{" "}
-                  This chair is absolutely amazing. It is made within design and
-                  quality specs of Herman Miller at a tenth of the cost. I
-                  recommend going with the tan or black Italian Leather.
-                </ListItem>
-                <ListItem mb={6}>
-                  <Link
-                    href="https://www.fully.com/design/jarvis-adjustable-height-desk-laminate.html"
+                    href="https://www.fully.com/standing-desks/jarvis/jarvis-adjustable-height-desk-bamboo.html"
                     title="Fully"
                     isExternal
                   >

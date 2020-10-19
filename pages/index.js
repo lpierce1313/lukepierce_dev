@@ -126,19 +126,19 @@ const Index = () => {
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
-            color="#7b45c7"
+            color="#FFD300"
           />
           <ProjectCard
             title="Milehigh Lawncare"
             description="A simple local landscaping application built by me using NodeJS and Bulma and hosted on Netlify/Cloudflare"
             href="https://www.milehighlawncare.com/"
-            color="#16d0b1"
+            color="#16972A"
           />
           <ProjectCard
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
             href="https://lpphotography.herokuapp.com/home.html"
-            color="#394490"
+            color="#6D2510"
           />
         </Flex>
         <Timeline />

@@ -85,9 +85,9 @@ const About = () => {
             </Heading>
             <Image
               className="pointer-hand"
-              src="/static/images/peru.png"
-              title="Peru 2019"
-              alt="Peru 2019"
+              src="/static/images/florida.jpg"
+              title="Florida 2020"
+              alt="Florida 2020"
             />
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
