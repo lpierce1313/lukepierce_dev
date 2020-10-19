@@ -183,9 +183,9 @@ const Container = ({ children }) => {
                   </NextLink>
                 </MenuItem>
                 <MenuItem>
-                  <NextLink href="/contact" passHref>
+                  <Link title="Email" onClick={onOpen} isExternal>
                     Contact
-                  </NextLink>
+                  </Link>
                 </MenuItem>
               </MenuList>
             </Menu>
