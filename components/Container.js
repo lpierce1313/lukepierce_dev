@@ -30,7 +30,6 @@ import NextLink from "next/link";
 import styled from "@emotion/styled";
 
 const StickyNav = styled(Flex)`
-  position: sticky;
   z-index: 10;
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
@@ -60,7 +59,6 @@ function useWindowSize() {
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const size = useWindowSize();
 
   const bgColor = {
@@ -136,6 +134,16 @@ const Container = ({ children }) => {
                 Dashboard
               </Button>
             </NextLink>
+            <NextLink href="/projects" passHref>
+              <Button
+                as="a"
+                variant="ghost"
+                p={[1, 4]}
+                aria-label="About Nav Link"
+              >
+                Projects
+              </Button>
+            </NextLink>
             <NextLink href="/about" passHref>
               <Button
                 as="a"
@@ -180,6 +188,11 @@ const Container = ({ children }) => {
                 <MenuItem>
                   <NextLink href="/about" passHref>
                     About
+                  </NextLink>
+                </MenuItem>
+                <MenuItem>
+                  <NextLink href="/projects" passHref>
+                    Projects
                   </NextLink>
                 </MenuItem>
                 <MenuItem>

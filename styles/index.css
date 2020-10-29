@@ -12,6 +12,16 @@ body {
   color: #0178df;
 }
 
+.hoveredImage{
+  height: 250px;
+  width: 380px;
+}
+
+.hoveredImage:hover{
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
 canvas.dots {
   position: absolute;
   top: 0;
