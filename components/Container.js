@@ -154,7 +154,12 @@ const Container = ({ children }) => {
                 About
               </Button>
             </NextLink>
-            <Link title="Email" onClick={onOpen} isExternal>
+            <Link
+              title="Email"
+              onClick={onOpen}
+              isExternal
+              style={{ textDecoration: "none" }}
+            >
               <Button variant="ghost" p={[1, 4]} aria-label="Contact Nav Link">
                 Contact
               </Button>
@@ -196,7 +201,12 @@ const Container = ({ children }) => {
                   </NextLink>
                 </MenuItem>
                 <MenuItem>
-                  <Link title="Email" onClick={onOpen} isExternal>
+                  <Link
+                    title="Email"
+                    onClick={onOpen}
+                    isExternal
+                    style={{ textDecoration: "none" }}
+                  >
                     Contact
                   </Link>
                 </MenuItem>

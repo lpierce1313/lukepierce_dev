@@ -123,6 +123,12 @@ const Index = () => {
             Recent Projects
           </Heading>
           <ProjectCard
+            title="GreetBox"
+            description="Group-Based Greeting Cards Online. Bring joy to someone's life with an online eCard filled with messages, photos, videos, and GIFs!"
+            href="https://greetbox.co/"
+            color="#B92EFF"
+          />
+          <ProjectCard
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
@@ -140,6 +146,15 @@ const Index = () => {
             href="https://lpphotography.herokuapp.com/home.html"
             color="#6D2510"
           />
+          <br />
+          <Text fontSize="1xl">
+            Curious about my other projects?{" "}
+            <NextLink href="/projects" passHref>
+              <Link color={secondaryTextColor[colorMode]}>
+                <Text as="u">Click here!</Text>
+              </Link>
+            </NextLink>
+          </Text>
         </Flex>
         <Timeline />
         <Subscribe />
