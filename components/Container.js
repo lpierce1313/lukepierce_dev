@@ -124,6 +124,16 @@ const Container = ({ children }) => {
         </Box>
         {size.width > 700 ? (
           <Box>
+            <NextLink href="//www.lukepierce.blog" passHref>
+              <Button
+                as="a"
+                variant="ghost"
+                p={[1, 4]}
+                aria-label="Blog Nav Link"
+              >
+                Blog
+              </Button>
+            </NextLink>
             <NextLink href="/dashboard" passHref>
               <Button
                 as="a"
@@ -185,6 +195,11 @@ const Container = ({ children }) => {
                 </svg>
               </MenuButton>
               <MenuList>
+                <MenuItem>
+                  <NextLink href="//www.lukepierce.blog" passHref>
+                    Blog
+                  </NextLink>
+                </MenuItem>
                 <MenuItem>
                   <NextLink href="/dashboard" passHref>
                     Dashboard
