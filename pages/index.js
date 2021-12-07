@@ -73,9 +73,9 @@ const Index = () => {
             React, NodeJS and Next.js.
             <br />
             <br />
-            Currently working full-time as a Software Engineer & front-end dev
-            at Raytheon, a well known defense contractor. You can learn more
-            about me{" "}
+            Currently working full-time as a Staff Software Consultant &
+            front-end dev at DSoft Technology, Engineering and Analysis, a
+            defense contractor in Colroado Springs. You can learn more about me{" "}
             <NextLink href="/about" passHref>
               <Link color={secondaryTextColor[colorMode]}>
                 <Text as="u">here</Text>

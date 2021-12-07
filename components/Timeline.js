@@ -179,6 +179,46 @@ const Timeline = () => {
         mb={4}
         letterSpacing="tighter"
       >
+        2021
+      </Heading>
+      <List>
+        <TimelineStep title="The Move to Castle Rock 🚙">
+          In efforts to decrease my commute to my job in the Springs, I moved to
+          Castle Rock. I have loved Castle Rock since everything is so close by
+          and my girlfriend is only a short drive away. There are definetly
+          adjustments to living alone, but I have been enjoying it.
+        </TimelineStep>
+        <TimelineStep title="Met an amazing girl 🙍🏼‍♀️">
+          While attending Mission Hills Fun Friday, I met someone that I had to
+          go on a date with. We had a great first date and have been dating ever
+          since. [July 19th 2021]
+        </TimelineStep>
+      </List>
+      <List>
+        <TimelineStep title="SpikeBall Injury 🚑">
+          Spikeball can get very competitive for me. It was our last game during
+          sunset on a summer night, and I was running for a ball which was going
+          to be a game winning play. I jumped very high setting the ball for my
+          teammate (Adam) and landed on the side of my ankle, it immediately
+          snapped (heard 4 cracking noises) however we got the point won the
+          game. That is all that matters! Rushed to the hospital shortly after.
+        </TimelineStep>
+      </List>
+      <List>
+        <TimelineStep title="New Job 💻">
+          Found a new job in Colorado Springs for a defense contractor for the
+          Air Force named DSoft Technology, Engineering and Analyis. I am now in
+          the Space Force and received a nice pay raise!
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
         2020
       </Heading>
       <List>

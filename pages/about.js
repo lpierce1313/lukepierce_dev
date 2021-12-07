@@ -91,8 +91,9 @@ const About = () => {
             />
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
-              As of May 2019, I have worked as a Software Engineer with Raytheon
-              in Aurora, CO
+              As of December 2021, I have worked as a Staff Software Consultant
+              with DSoft Technology, Engineering, and Analysis in Colorado
+              Springs, CO
               <br />
               <br />I was born and raised in beautiful Denver, CO. I grew up
               camping, hiking, and enjoying the great outdoors. At a very young
