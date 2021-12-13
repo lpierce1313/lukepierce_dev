@@ -73,9 +73,10 @@ const Index = () => {
             React, NodeJS and Next.js.
             <br />
             <br />
-            Currently working full-time as a Staff Software Consultant &
+            Currently working full-time as a Staff Software Consultant and
             front-end dev at DSoft Technology, Engineering and Analysis, a
-            defense contractor in Colroado Springs. You can learn more about me{" "}
+            defense contractor in Colorado Springs, Colorado. You can learn more
+            about me{" "}
             <NextLink href="/about" passHref>
               <Link color={secondaryTextColor[colorMode]}>
                 <Text as="u">here</Text>
@@ -128,7 +129,7 @@ const Index = () => {
             href="https://greetbox.co/"
             color="#B92EFF"
           />
-          <ProjectCard
+          {/* <ProjectCard
             title="SpeedyNote"
             description="A free website application for sending fast, secure & private Notes with Next.js, Tailwind, and React"
             href="https://speedynote.app/"
@@ -139,7 +140,7 @@ const Index = () => {
             description="A simple local landscaping application built by me using NodeJS and Bulma and hosted on Netlify/Cloudflare"
             href="https://www.milehighlawncare.com/"
             color="#16972A"
-          />
+          /> */}
           <ProjectCard
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
