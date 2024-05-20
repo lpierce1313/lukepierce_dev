@@ -182,7 +182,10 @@ const Timeline = () => {
         2024
       </Heading>
       <List>
-        <TimelineStep title="Marriage">
+        <TimelineStep title="1st Anniversary">
+          Amazing trip to Maui, Hawaii June 11th.
+        </TimelineStep>
+        <TimelineStep title="1st Anniversary">
           Celebrating our 1st anniversary together. March 12th 2024.
         </TimelineStep>
       </List>
