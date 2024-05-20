@@ -1,6 +1,8 @@
-// =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
-// =============================================================================
+/*
+ * =============================================================================
+ * Copyright © 2020 Luke Pierce. All rights reserved.
+ * =============================================================================
+ */
 
 import {
   Button,
@@ -19,14 +21,21 @@ import {
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/core";
+import React from "react";
+import NextLink from "next/link";
+
 import { FULL_NAME, INTRO_TYPING } from "../lib/constants";
 
 // import BlogPost from "@/components/BlogPost";
+// eslint-disable-next-line import/no-unresolved
 import Container from "@/components/Container";
-import NextLink from "next/link";
+// eslint-disable-next-line import/no-unresolved
 import ProjectCard from "@/components/ProjectCard";
+// eslint-disable-next-line import/no-unresolved
 import Subscribe from "@/components/Subscribe";
+// eslint-disable-next-line import/no-unresolved
 import Timeline from "@/components/Timeline";
+// eslint-disable-next-line import/no-unresolved
 import useTyped from "@/components/useTyped";
 
 const Index = () => {
@@ -73,13 +82,20 @@ const Index = () => {
             React, NodeJS and Next.js.
             <br />
             <br />
-            Currently working full-time as a Staff Software Consultant and
-            front-end dev at DSoft Technology, Engineering and Analysis, a
-            defense contractor in Colorado Springs, Colorado. You can learn more
-            about me{" "}
+            As a Senior Software Engineer at Veritone since May 2022, I have
+            spearheaded the development and enhancement of four critical
+            applications utilizing modern technologies such as React, Docker,
+            and Ruby on Rails. I led the creation of an AI-powered video
+            redaction tool that automatically censors video footage to protect
+            privacy and comply with data protection laws. Additionally, I
+            developed a specialized reporting tool for law enforcement, a media
+            transcription platform for seamless audio and video content
+            transcription, and an intuitive video analysis app that identifies
+            and highlights points of interest in videos, enhancing user content
+            analysis and interpretation. You can learn more about me{" "}
             <NextLink href="/about" passHref>
               <Link color={secondaryTextColor[colorMode]}>
-                <Text as="u">here</Text>
+                <Text as="u">here</Text>.
               </Link>
             </NextLink>
             <br />

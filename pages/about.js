@@ -1,6 +1,8 @@
-// =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
-// =============================================================================
+/*
+ * =============================================================================
+ * Copyright © 2020 Luke Pierce. All rights reserved.
+ * =============================================================================
+ */
 
 import {
   Divider,
@@ -14,14 +16,17 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/core";
-import { FULL_NAME, HOST_URL } from "../lib/constants";
 import React, { useEffect, useState } from "react";
-
-import Container from "@/components/Container";
 import NextLink from "next/link";
 import { NextSeo } from "next-seo";
 import Skeleton from "react-loading-skeleton";
 import dynamic from "next/dynamic";
+
+import { FULL_NAME, HOST_URL } from "../lib/constants";
+
+// eslint-disable-next-line import/no-unresolved
+import Container from "@/components/Container";
+// eslint-disable-next-line import/no-unresolved
 import useMobile from "@/components/useMobile";
 
 const url = `${HOST_URL}/about`;
@@ -50,6 +55,7 @@ const About = () => {
 
   useEffect(() => {
     setLoading(true);
+    // eslint-disable-next-line get-off-my-lawn/prefer-arrow-functions
     setTimeout(function () {
       setLoading(false);
     }, 400);
@@ -91,9 +97,8 @@ const About = () => {
             />
             <Divider borderColor={borderColor[colorMode]} my={8} w="100%" />
             <Text color={secondaryTextColor[colorMode]} fontSize="2xl" mb={4}>
-              As of December 2021, I have worked as a Staff Software Consultant
-              with DSoft Technology, Engineering, and Analysis in Colorado
-              Springs, CO
+              As of May 2022, I have worked at Veritone on cutting edge AI web
+              development software for the government sector.
               <br />
               <br />I was born and raised in beautiful Denver, CO. I grew up
               camping, hiking, and enjoying the great outdoors. At a very young
@@ -166,7 +171,7 @@ const About = () => {
               <Map
                 name="world"
                 colorMode={colorMode}
-                showZoom={true}
+                showZoom
                 mobile={isTouchDevice}
                 mapType={"worldLow"}
                 seriesOneFill={"#C5B36D"}

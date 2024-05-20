@@ -179,6 +179,61 @@ const Timeline = () => {
         mb={4}
         letterSpacing="tighter"
       >
+        2024
+      </Heading>
+      <List>
+        <TimelineStep title="Marriage">
+          Celebrating our 1st anniversary together. March 12th 2024.
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
+        2023
+      </Heading>
+      <List>
+        <TimelineStep title="My wife and I bought our first home!">
+          In May 2023, my wife and I bought a home in Highlands Ranch! We love
+          the home and love the area.
+        </TimelineStep>
+        <TimelineStep title="Marriage">
+          My wife and I got married in Palmer Lake, CO celebrated around our
+          wonderful family and friends.
+        </TimelineStep>
+        <TimelineStep title="Skiing with my season pass">
+          Went skiing for 10 different times this year. Started easily skiing
+          black diamons has been so fun.
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
+        2022
+      </Heading>
+      <List>
+        <TimelineStep title="New Job">
+          May 2022, found a new job at Veritone to contribute to building out AI
+          Web solutions for government sector.
+        </TimelineStep>
+      </List>
+      <YearDivider />
+      <Heading
+        as="h3"
+        size="lg"
+        fontWeight="bold"
+        mb={4}
+        letterSpacing="tighter"
+      >
         2021
       </Heading>
       <List>
