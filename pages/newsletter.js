@@ -1,5 +1,5 @@
 // =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
+// Copyright © 2024 Luke Pierce. All rights reserved.
 // =============================================================================
 
 import { FULL_NAME, HOST_URL } from "@/lib/constants";
@@ -64,7 +64,7 @@ const Newsletter = () => {
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>Example</Text>
           </Flex>
-          <Subscribe />
+          {/* <Subscribe /> */}
           <Flex
             flexDirection="column"
             justifyContent="flex-start"

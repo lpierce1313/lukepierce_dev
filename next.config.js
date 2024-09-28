@@ -1,5 +1,5 @@
 // =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
+// Copyright © 2024 Luke Pierce. All rights reserved.
 // =============================================================================
 
 const readingTime = require("reading-time");
@@ -27,7 +27,6 @@ module.exports = withMdxEnhanced({
     if (isServer) {
       require("./scripts/generate-sitemap");
     }
-
     return config;
   },
 });

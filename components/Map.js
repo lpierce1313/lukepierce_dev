@@ -1,5 +1,5 @@
 // =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
+// Copyright © 2024 Luke Pierce. All rights reserved.
 // =============================================================================
 
 import * as am4core from "@amcharts/amcharts4/core";

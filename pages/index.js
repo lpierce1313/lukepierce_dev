@@ -140,6 +140,8 @@ const Index = () => {
             Recent Projects
           </Heading>
           <ProjectCard
+            disableHover
+            disableClick
             title="GreetBox"
             description="Group-Based Greeting Cards Online. Bring joy to someone's life with an online eCard filled with messages, photos, videos, and GIFs!"
             href="https://greetbox.co/"
@@ -158,6 +160,8 @@ const Index = () => {
             color="#16972A"
           /> */}
           <ProjectCard
+            disableHover
+            disableClick
             title="LP Photography"
             description="I am into photography, I had purchased a Nikon D3400 camera and I wanted to share my work on a website so people could easily view my work. This is my photography portfolio. "
             href="https://lpphotography.herokuapp.com/home.html"
@@ -174,7 +178,7 @@ const Index = () => {
           </Text>
         </Flex>
         <Timeline />
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Stack>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -186,12 +190,12 @@ const Index = () => {
             </Text>
             <br />
             <Button mx={1} aria-label="Download PDF Resume">
-              <a href="luke-pierce-resume.pdf" download>
+              <a href="luke-pierce-resume-09-27.pdf" download>
                 PDF
               </a>
             </Button>
             <Button mx={1} aria-label="Download DOCX Resume">
-              <a href="luke-pierce-resume.docx" download>
+              <a href="luke-pierce-resume-09-27.docx" download>
                 DOCX
               </a>
             </Button>

@@ -1,5 +1,5 @@
 // =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
+// Copyright © 2024 Luke Pierce. All rights reserved.
 // =============================================================================
 
 import {
@@ -182,11 +182,17 @@ const Timeline = () => {
         2024
       </Heading>
       <List>
-        <TimelineStep title="1st Anniversary">
-          Amazing trip to Maui, Hawaii June 11th.
+        <TimelineStep title="New Job 👨‍💻">
+          Started a new job at Grey Matters Defense Solutions in Centennial, CO.
+          So far I love it.
         </TimelineStep>
-        <TimelineStep title="1st Anniversary">
-          Celebrating our 1st anniversary together. March 12th 2024.
+        <TimelineStep title="Poured Concrete Patio 🪨">
+          Poured a beautiful and brand new patio for our backyard it spans close
+          to 1400 Square Feet.
+        </TimelineStep>
+        <TimelineStep title="1st Anniversary ❤️">
+          Celebrating our 1st anniversary together. March 12th 2024. Went to the
+          Melting Pot with my wife in Downtown Littleton
         </TimelineStep>
       </List>
       <YearDivider />

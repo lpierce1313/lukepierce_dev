@@ -1,5 +1,5 @@
 // =============================================================================
-// Copyright © 2020 Luke Pierce. All rights reserved.
+// Copyright © 2024 Luke Pierce. All rights reserved.
 // =============================================================================
 
 import {
@@ -134,7 +134,7 @@ const Container = ({ children }) => {
                 Blog
               </Button>
             </NextLink>
-            <NextLink href="/dashboard" passHref>
+            {/* <NextLink href="/dashboard" passHref>
               <Button
                 as="a"
                 variant="ghost"
@@ -143,7 +143,7 @@ const Container = ({ children }) => {
               >
                 Dashboard
               </Button>
-            </NextLink>
+            </NextLink> */}
             <NextLink href="/projects" passHref>
               <Button
                 as="a"
