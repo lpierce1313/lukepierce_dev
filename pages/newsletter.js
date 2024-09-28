@@ -15,7 +15,6 @@ import {
 import Container from "@/components/Container";
 import NewsletterLink from "@/components/NewsletterLink";
 import { NextSeo } from "next-seo";
-import Subscribe from "@/components/Subscribe";
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as newsletters } from "./newsletter/**/*.mdx";
 
